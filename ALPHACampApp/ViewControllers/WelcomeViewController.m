@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
+#import <Parse/Parse.h>
 
 @interface WelcomeViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -21,6 +22,16 @@
     self.loginButton.layer.cornerRadius =5.0f;
     self.signupButton.layer.cornerRadius =5.0f;
     
+    //若已經登入過, user會存在cache中,則可跳過login過程
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        UITabBarController *tabBarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+        [tabBarVC setSelectedIndex:0];
+        [self presentViewController:tabBarVC animated:YES completion:nil];
+
+    } else {
+        // show the signup or login screen
+    }
     
     // Do any additional setup after loading the view.
 }

@@ -69,31 +69,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your email" minimumFontSize="17" id="tRf-hh-P7q">
-                                <rect key="frame" x="24" y="77" width="271" height="30"/>
+                                <rect key="frame" x="25" y="226" width="271" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Passward" minimumFontSize="17" id="DMf-4k-q13">
-                                <rect key="frame" x="24" y="115" width="271" height="30"/>
+                                <rect key="frame" x="24" y="269" width="271" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Passward again" minimumFontSize="17" id="dw1-r8-Fs0">
-                                <rect key="frame" x="24" y="153" width="271" height="30"/>
+                                <rect key="frame" x="24" y="312" width="271" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your nick name" minimumFontSize="17" id="laa-Nx-NDu">
+                                <rect key="frame" x="24" y="178" width="271" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your name" minimumFontSize="17" id="laa-Nx-NDu">
-                                <rect key="frame" x="24" y="191" width="271" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your first name" minimumFontSize="17" id="hIT-BN-CZj">
+                                <rect key="frame" x="25" y="87" width="271" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your last name" minimumFontSize="17" id="GOK-Wc-4yB">
+                                <rect key="frame" x="25" y="133" width="271" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WE3-Lj-9cU">
-                                <rect key="frame" x="70" y="239" width="180" height="40"/>
+                                <rect key="frame" x="70" y="416" width="180" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -115,6 +127,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="DPh-Aa-64q"/>
                     <connections>
+                        <outlet property="confirmPWTextField" destination="dw1-r8-Fs0" id="IEh-y7-N8T"/>
+                        <outlet property="emailTextField" destination="tRf-hh-P7q" id="ofF-7Z-TgG"/>
+                        <outlet property="firstNameTextField" destination="hIT-BN-CZj" id="Ves-uf-xIa"/>
+                        <outlet property="lastNameTextField" destination="GOK-Wc-4yB" id="gQ5-YZ-XXc"/>
+                        <outlet property="nickNameTextField" destination="laa-Nx-NDu" id="tcX-dI-GW7"/>
+                        <outlet property="passwordTextField" destination="DMf-4k-q13" id="lfv-XC-WpP"/>
                         <outlet property="registerButton" destination="WE3-Lj-9cU" id="SBm-VT-p5u"/>
                     </connections>
                 </viewController>
@@ -130,7 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input ID" minimumFontSize="17" id="EZ2-ES-6uI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input email" minimumFontSize="17" id="EZ2-ES-6uI">
                                 <rect key="frame" x="28" y="97" width="263" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -140,7 +158,7 @@
                                 <rect key="frame" x="28" y="135" width="263" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QFy-yn-LSd">
                                 <rect key="frame" x="70" y="193" width="180" height="40"/>
@@ -156,13 +174,18 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPredded:" destination="m3i-j6-ZJk" eventType="touchUpInside" id="rFw-0k-bur"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="dys-sa-rQC"/>
                     <connections>
+                        <outlet property="emailTextField" destination="EZ2-ES-6uI" id="8hK-EZ-Lxr"/>
                         <outlet property="loginButton" destination="QFy-yn-LSd" id="qCQ-vX-Y7J"/>
+                        <outlet property="passwordTextField" destination="8pJ-dB-vEQ" id="Lnw-9p-H8z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xi-HP-N80" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,6 +220,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="cNM-9p-HUA" eventType="touchUpInside" id="6Gb-rg-QMm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALPHACamp founder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t6K-Bv-dWt">
                                 <rect key="frame" x="134" y="141" width="166" height="21"/>
@@ -223,14 +249,66 @@
                         <barButtonItem title="Item" id="w5S-fE-MzZ"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Orp-Uj-kM1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="3dn-iU-vyJ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="flP-KL-Pck"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="3dn-iU-vyJ">
+                            <connections>
+                                <segue destination="xwS-Ph-CEM" kind="modal" animates="NO" id="jOY-WM-3JG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBarButton" destination="3dn-iU-vyJ" id="okF-s6-Scj"/>
+                        <outlet property="searchDisplayController" destination="U7d-Hl-c7Q" id="mFj-5z-2aO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSJ-Y9-bHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="U7d-Hl-c7Q">
+                    <connections>
+                        <outlet property="delegate" destination="cNM-9p-HUA" id="gzR-fc-nSp"/>
+                        <outlet property="searchContentsController" destination="cNM-9p-HUA" id="QKS-d5-Wfg"/>
+                        <outlet property="searchResultsDataSource" destination="cNM-9p-HUA" id="zgR-mZ-Jmq"/>
+                        <outlet property="searchResultsDelegate" destination="cNM-9p-HUA" id="8tp-7c-bj8"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-650" y="1868"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="j1e-ci-NIM">
+            <objects>
+                <viewController id="xwS-Ph-CEM" customClass="SearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zI0-QJ-T0n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" id="Jui-Mk-nl5">
+                                <rect key="frame" x="0.0" y="24" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xwS-Ph-CEM" id="3ti-QS-ACh"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pUA-Hd-fOx"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="0f2-yK-ImW" id="AIf-Jf-peY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oq-rX-Thz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="0f2-yK-ImW">
+                    <connections>
+                        <outlet property="delegate" destination="xwS-Ph-CEM" id="OIg-Ji-7zf"/>
+                        <outlet property="searchBar" destination="Jui-Mk-nl5" id="CCI-q1-IBu"/>
+                        <outlet property="searchContentsController" destination="xwS-Ph-CEM" id="0wp-FQ-jio"/>
+                        <outlet property="searchResultsDataSource" destination="xwS-Ph-CEM" id="KYa-4c-32E"/>
+                        <outlet property="searchResultsDelegate" destination="xwS-Ph-CEM" id="V09-uc-WhY"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-275" y="1868"/>
         </scene>
         <!--Class View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -321,7 +399,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="pM0-gg-la3">
             <objects>
-                <viewController id="Fuc-Wf-gpV" customClass="WelcomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="Fuc-Wf-gpV" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <view key="view" alpha="0.89999999999999991" contentMode="scaleToFill" id="4AZ-Lr-TsZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
