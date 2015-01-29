@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EventDetailViewController : UIViewController
+@property (strong, nonatomic) NSString *eventDetailURL;
 
 @end

@@ -7,9 +7,12 @@
 //
 
 #import "EventDetailViewController.h"
+#import <Parse/Parse.h>
 
 @interface EventDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+
 
 @end
 
@@ -17,11 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // show navigationBar to go back
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
-    NSString *fullURL = @"https://www.alphacamp.co/seminars/";
-    NSURL *url = [NSURL URLWithString:fullURL];
+    //setup WebView  URL
+    NSURL *url = [NSURL URLWithString:self.eventDetailURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
 }

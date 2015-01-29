@@ -45,16 +45,14 @@
     
     //Literal Syntax
     allPeople =@[user1,user2,user3,user4];
-    
-    
-    
-    
+
 }
+
 -(void)viewWillAppear:(BOOL)animated
 {
-    
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
