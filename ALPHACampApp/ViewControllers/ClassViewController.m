@@ -10,6 +10,8 @@
 
 @interface ClassViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *classTableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) NSString *titleStr;
 
 @end
 
@@ -18,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    NSString *iOS = @"iOS";
+    self.titleStr =iOS;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -28,6 +31,45 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//set up segmentedControl
+- (IBAction)segmentedControl:(id)sender {
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+        {
+           NSString *iOS = @"iOS";
+           self.titleStr =iOS;
+        
+            [self.classTableView reloadData];
+            
+            break;
+        }
+        case 1:
+        {
+            NSString *web = @"Web";
+            self.titleStr =web;
+            
+            [self.classTableView reloadData];
+              break;
+        }
+        case 2:
+        {
+            NSString *marketing = @"Marketing";
+            self.titleStr =marketing;
+            
+            [self.classTableView reloadData];
+            
+            break;
+        }
+        default:
+            break;
+    }
+
+    
+}
+
+
 #pragma mark tableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -42,7 +84,22 @@
     return 10;
     
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30.0;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *headerLabel = [[UILabel alloc]init];
+    
+    headerLabel.frame = CGRectMake(0, 0, 300, 40.0);
+    headerLabel.textColor =[ UIColor grayColor];
+    headerLabel.text = @"    Weekly Class Topic";
+    //headerLabel.backgroundColor =[UIColor colorWithRed:255/255.0 green:102/255.0 blue:0/255.0 alpha:1];
 
+    return headerLabel;
+    
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 60.0;
@@ -68,7 +125,7 @@
         //NSLog(@"I have been initialize. Row = %li", (long)indexPath.row);
     }
     cell.textLabel.text= [NSString stringWithFormat:@"Week%ld",(long)indexPath.row+1];
-    
+    cell.detailTextLabel.text= self.titleStr;
     
     
     return cell;

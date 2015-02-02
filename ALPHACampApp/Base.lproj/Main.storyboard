@@ -319,7 +319,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="StK-ag-DTY">
-                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                                <rect key="frame" x="0.0" y="84" width="320" height="492"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -335,6 +335,9 @@
                                     <segment title="Web"/>
                                     <segment title="Marketing"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="8rJ-Kc-sve" eventType="valueChanged" id="BC0-Ik-dyx"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -342,6 +345,7 @@
                     <navigationItem key="navigationItem" id="9eT-Le-Msg"/>
                     <connections>
                         <outlet property="classTableView" destination="StK-ag-DTY" id="cd5-uf-HmJ"/>
+                        <outlet property="segmentedControl" destination="b2Y-4y-FgE" id="aVL-3V-me9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
