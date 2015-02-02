@@ -23,6 +23,7 @@
     NSString *iOS = @"iOS";
     self.titleStr =iOS;
     NSLog(@"title: %@", iOS);
+    NSLog(@"table");
     
 }
 -(void)viewWillAppear:(BOOL)animated
