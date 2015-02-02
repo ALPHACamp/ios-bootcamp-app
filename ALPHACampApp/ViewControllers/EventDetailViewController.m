@@ -23,8 +23,9 @@
     // show navigationBar to go back
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
-    //setup WebView  URL
+    //setup WebView URL
     NSURL *url = [NSURL URLWithString:self.eventDetailURL];
+  NSLog(@"Print URL: %@", url);
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
 }
