@@ -32,6 +32,7 @@
 		E84393E81A6684A400A09E36 /* alpha-logo-long.png in Resources */ = {isa = PBXBuildFile; fileRef = E84393E71A6684A400A09E36 /* alpha-logo-long.png */; };
 		E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */; };
 		E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA91A77D44D00EDA316 /* User.m */; };
+		E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		E8EA3BA81A77D44D00EDA316 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E8EA3BA91A77D44D00EDA316 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E8FA6C0C1A7F9CD600FD8E2F /* ACEventButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEventButton.h; sourceTree = "<group>"; };
+		E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEventButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 		E823E9AA1A5ED4DA00FD86D1 /* ALPHACampApp */ = {
 			isa = PBXGroup;
 			children = (
+				E8FA6C0C1A7F9CD600FD8E2F /* ACEventButton.h */,
+				E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */,
 				E8EA3BA71A77D40D00EDA316 /* Model */,
 				E84393D41A6673D700A09E36 /* ViewControllers */,
 				E823E9B81A5ED4DA00FD86D1 /* Main.storyboard */,
@@ -382,6 +387,7 @@
 				E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */,
 				E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */,
 				E80596F71A714F77008B73F3 /* ClassDetailViewController.m in Sources */,
+				E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */,
 				E84393E01A6675DC00A09E36 /* WelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 #import "EventViewController.h"
 #import "EventDetailViewController.h"
 #import <Parse/Parse.h>
+#import "ACEventButton.h"
 
 @interface EventViewController ()
 @property (strong, nonatomic)UIScrollView * scrollView;
@@ -87,15 +88,12 @@
                 detailTextView.text= objects[i][@"content"];
                 
                 //define button
-                UIButton * moreInfoButton =[[UIButton alloc]initWithFrame:CGRectMake((view.frame.size.width-180)/2, 350, 180, 40)];
+                ACEventButton * moreInfoButton =[[ACEventButton alloc]initWithFrame:CGRectMake((view.frame.size.width-180)/2, 350, 180, 40)];
                 [moreInfoButton setTitle:@"瞭解更多" forState:UIControlStateNormal];
                 [moreInfoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 moreInfoButton.backgroundColor = [UIColor colorWithRed:255/255.0 green:102/255.0 blue:0/255.0 alpha:1];
                 moreInfoButton.layer.cornerRadius =5.0f;
-                moreInfoButton.tag=i;
                 
-                //add URL to URLArray
-                [self.URLArray addObject:objects[i][@"eventURL"]];
                 
                 [moreInfoButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
                 
@@ -122,9 +120,9 @@
 
 -(void)buttonPressed: (id)sender
 {
-    UIButton *button =(UIButton *) sender;
-    //透過button.tag 找到URLArray中對應的URL
-    NSString *URL = [NSString stringWithFormat:@"%@", self.URLArray[button.tag]];
+    ACEventButton *button =(ACEventButton *) sender;
+    //透過button.event 這個object,找到對應的URL
+    NSString *URL = [NSString stringWithFormat:@"%@", button.event[@"eventURL"]];
     
     
     EventDetailViewController *eventDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];

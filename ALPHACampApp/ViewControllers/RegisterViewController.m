@@ -67,11 +67,9 @@
         [alert addAction:ok];
         
         [self presentViewController:alert animated:YES completion:nil];
+        return;
 
     }
-    
-    
-    
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
@@ -98,7 +96,7 @@
 
         } else {
             NSString *errorString = [error userInfo][@"error"];
-            NSLog(@"%@",errorString);
+            NSLog(@"sign up in background: %@",errorString);
             // Show the errorString somewhere and let the user try again.
         }
     }];
