@@ -284,6 +284,7 @@
 				TargetAttributes = {
 					E823E9A71A5ED4DA00FD86D1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 9DK2B8E236;
 					};
 					E823E9C31A5ED4DA00FD86D1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -511,6 +512,7 @@
 			baseConfigurationReference = 534FC5A5627963B9EB2A88E1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACampApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -522,6 +524,7 @@
 			baseConfigurationReference = A21BC6F7000DDA47223AF5B3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACampApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
