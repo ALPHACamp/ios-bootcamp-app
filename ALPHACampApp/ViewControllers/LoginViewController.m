@@ -25,9 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    //to show up keyboard automatically
+    [self.emailTextField becomeFirstResponder];
     
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
