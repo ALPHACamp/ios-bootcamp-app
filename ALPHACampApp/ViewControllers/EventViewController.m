@@ -89,6 +89,7 @@
                 
                 //define button
                 ACEventButton * moreInfoButton =[[ACEventButton alloc]initWithFrame:CGRectMake((view.frame.size.width-180)/2, 350, 180, 40)];
+                moreInfoButton.event=objects[i];
                 [moreInfoButton setTitle:@"瞭解更多" forState:UIControlStateNormal];
                 [moreInfoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 moreInfoButton.backgroundColor = [UIColor colorWithRed:255/255.0 green:102/255.0 blue:0/255.0 alpha:1];
