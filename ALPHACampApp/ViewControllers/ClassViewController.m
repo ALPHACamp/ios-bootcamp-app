@@ -7,11 +7,15 @@
 //
 
 #import "ClassViewController.h"
+#import <AFNetworking/AFNetworking.h>
 
-@interface ClassViewController ()<UITableViewDataSource, UITableViewDelegate>
+#define api_key @"21f7814731bbbcc3302fbe06194e53c4993a3976"
+
+@interface ClassViewController ()<UITableViewDataSource, UITableViewDelegate,
+    UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *classTableView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (strong, nonatomic) NSString *titleStr;
+@property (strong, nonatomic)NSArray *courseArray;
+@property (strong, nonatomic)NSArray *sectionArray;
 
 @end
 
@@ -20,56 +24,67 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *iOS = @"iOS";
-    self.titleStr =iOS;
-    NSLog(@"title: %@", iOS);
-    NSLog(@"table");
-    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-//set up segmentedControl
-- (IBAction)segmentedControl:(id)sender {
-    switch (self.segmentedControl.selectedSegmentIndex)
-    {
-        case 0:
-        {
-           NSString *iOS = @"iOS";
-           self.titleStr =iOS;
-        
-            [self.classTableView reloadData];
-            
-            break;
-        }
-        case 1:
-        {
-            NSString *web = @"Web";
-            self.titleStr =web;
-            
-            [self.classTableView reloadData];
-              break;
-        }
-        case 2:
-        {
-            NSString *marketing = @"Marketing";
-            self.titleStr =marketing;
-            
-            [self.classTableView reloadData];
-            
-            break;
-        }
-        default:
-            break;
-    }
-
+- (IBAction)selectCourseButton:(id)sender {
     
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *authToken = [NSString stringWithFormat:@"%@", [userDefaults stringForKey:@"auth_token"]];
+    NSLog(@"token: %@", authToken);
+    NSDictionary *parameters = @{
+                                 @"api_key": api_key,
+                                 @"auth_token": authToken};
+    
+    [manager GET:@"https://school.alphacamp.co/api/v1/courses"
+      parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             //NSLog(@"Course: %@", responseObject);
+            self.courseArray = responseObject[@"courses"];
+     
+             // 用actionsheet 來選擇課程
+             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+              for (int i=0; i < self.courseArray.count; i++) {
+                  UIAlertAction *action =[UIAlertAction actionWithTitle:self.courseArray[i][@"name"] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                      NSLog(@"button pressed: %i", i);
+                      //抓取課程資料
+                      AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+                      NSString * course_id = [NSString stringWithFormat:@"%@", self.courseArray[i][@"id"]];
+                      NSString *sectionURL =[NSString stringWithFormat:@"https://school.alphacamp.co/api/v1/courses/%@",course_id];
+                      
+                      NSDictionary *parameters = @{
+                                                   @"api_key": api_key,
+                                                   @"auth_token": authToken};
+                      
+                      [manager GET:sectionURL
+                        parameters:parameters
+                           success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                               //NSLog(@"Section: %@", responseObject);
+                               self.sectionArray=responseObject[@"syllabus"];
+                               NSLog(@"syllabus: %lu", self.sectionArray.count);
+                               for (int i =0; i<self.sectionArray.count; i++) {
+                                   NSLog(@"section:%@", self.sectionArray[i][@"section"][@"name"]);
+                               }
+                               [self.classTableView reloadData];
+                               
+                           }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                               NSLog(@"Get Section Error: %@", error);
+                           }];
+                  }];
+                  [alertController addAction:action];
+              }
+               [self presentViewController:alertController animated:YES completion:nil];
+         }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"Get Course Error: %@", error);
+         }];
 }
 
 
@@ -82,9 +97,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-   
-    return 10;
+    if (!self.sectionArray.count) {
+        return 3;
+    }else
+    return self.sectionArray.count;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -97,7 +113,7 @@
     
     headerLabel.frame = CGRectMake(0, 0, 300, 40.0);
     headerLabel.textColor =[ UIColor grayColor];
-    headerLabel.text = @"    Weekly Class Topic";
+    headerLabel.text = @"    課程內容";
     //headerLabel.backgroundColor =[UIColor colorWithRed:255/255.0 green:102/255.0 blue:0/255.0 alpha:1];
 
     return headerLabel;
@@ -105,7 +121,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 60.0;
+    return 40.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -116,20 +132,23 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.backgroundColor =[UIColor clearColor];
         cell.textLabel.textColor = [UIColor grayColor];
-        cell.textLabel.font =[UIFont systemFontOfSize:17];
+        cell.textLabel.font =[UIFont systemFontOfSize:15];
         cell.detailTextLabel.textColor = [UIColor lightGrayColor];
         cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
         
-        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+        //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         
        
         
     } else {
         //NSLog(@"I have been initialize. Row = %li", (long)indexPath.row);
     }
-    cell.textLabel.text= [NSString stringWithFormat:@"Week%ld",(long)indexPath.row+1];
-    cell.detailTextLabel.text= self.titleStr;
-    
+    if (!self.sectionArray) {
+        cell.textLabel.text=@"";
+    }else{
+    cell.textLabel.text= [NSString stringWithFormat:@"%@",self.sectionArray[indexPath.row][@"section"][@"name"]];
+    //cell.detailTextLabel.text= @"test";
+    }
     
     return cell;
 }

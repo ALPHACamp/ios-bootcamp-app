@@ -40,7 +40,8 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{
                                  @"email": self.emailTextField.text,
-                                 @"password": self.passwordTextField.text};
+                                 @"password": self.passwordTextField.text,
+                                 @"api_key": api_key};
     [manager POST:@"https://school.alphacamp.co/api/v1/login"
        parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -51,8 +52,13 @@
 
               
               NSLog(@"JSON: %@", responseObject);
-              
               self.auth_token = [NSString stringWithFormat:@"%@", responseObject[@"auth_token"]];
+              
+              NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+              [userDefaults setObject:self.auth_token forKey:@"auth_token"];
+              
+              [userDefaults synchronize];
+              
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Login in Error: %@", error);
               //NSString *erroeMessage = [NSString stringWithFormat:@"%@", error];
