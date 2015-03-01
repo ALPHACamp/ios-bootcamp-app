@@ -55,6 +55,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZtJ-1C-hkg"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,13 +153,7 @@
                                 <rect key="frame" x="28" y="97" width="263" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Passward" minimumFontSize="17" id="8pJ-dB-vEQ">
-                                <rect key="frame" x="28" y="135" width="263" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QFy-yn-LSd">
                                 <rect key="frame" x="70" y="193" width="180" height="40"/>
@@ -178,10 +173,17 @@
                                     <action selector="loginButtonPressed:" destination="m3i-j6-ZJk" eventType="touchUpInside" id="dH2-sB-IiT"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Passward" minimumFontSize="17" id="8pJ-dB-vEQ">
+                                <rect key="frame" x="28" y="147" width="263" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="dys-sa-rQC"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="EZ2-ES-6uI" id="8hK-EZ-Lxr"/>
                         <outlet property="loginButton" destination="QFy-yn-LSd" id="qCQ-vX-Y7J"/>
@@ -256,6 +258,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="searchBarButton" destination="3dn-iU-vyJ" id="okF-s6-Scj"/>
                         <outlet property="searchDisplayController" destination="U7d-Hl-c7Q" id="mFj-5z-2aO"/>
@@ -293,6 +296,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pUA-Hd-fOx"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="0f2-yK-ImW" id="AIf-Jf-peY"/>
                     </connections>
@@ -337,6 +341,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="classTableView" destination="StK-ag-DTY" id="cd5-uf-HmJ"/>
                     </connections>
@@ -358,10 +363,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="LGw-JZ-ltL">
+                                <rect key="frame" x="150" y="310" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="indicatorView" destination="LGw-JZ-ltL" id="1be-im-PVZ"/>
                         <outlet property="webView" destination="6D5-Mh-rzQ" id="02j-7V-E2Y"/>
                     </connections>
                 </viewController>
@@ -390,6 +401,7 @@
                             <outlet property="delegate" destination="c6i-Ob-ZBU" id="v2a-Da-ZSd"/>
                         </connections>
                     </tableView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9Y-H8-LBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -408,10 +420,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="tIH-Hn-ngJ">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="indicatorView" destination="tIH-Hn-ngJ" id="KXT-1f-IOw"/>
                         <outlet property="webView" destination="SB1-Gz-pg0" id="lFO-66-kcn"/>
                     </connections>
                 </viewController>
@@ -461,6 +479,7 @@
                         <color key="backgroundColor" red="0.047058823529411764" green="0.039215686274509803" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="xyt-5O-Z5f"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="loginButton" destination="qhv-nJ-hAJ" id="465-GI-ugF"/>
                         <outlet property="signupButton" destination="ayr-CU-oFc" id="Tpl-c6-6jn"/>

@@ -12,15 +12,21 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
+
+@property(nonatomic) BOOL suppressesIncrementalRendering;
 @end
 
 @implementation ClassDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.refreshControl beginRefreshing];
-    // Do any additional setup after loading the view.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
+    [self.indicatorView startAnimating];
+    
+    //improve WebView loading performance
+    self.suppressesIncrementalRendering =YES;
     self.webView.delegate =self;
     //NSString *fullURL = self.webViewURL;
     NSURL *url = [NSURL URLWithString:self.webViewURL];
@@ -36,7 +42,8 @@
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[email]')[0].value = '%@';",userName]];
    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[password]')[0].value = '%@';",password]];
      [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('commit')[0].click();"];
-    [self.refreshControl endRefreshing];
+    //[self.indicatorView stopAnimating];
+    self.indicatorView.hidden=YES;
 }
 
 - (void)didReceiveMemoryWarning {
