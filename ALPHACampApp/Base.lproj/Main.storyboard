@@ -175,7 +175,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="loginButtonPredded:" destination="m3i-j6-ZJk" eventType="touchUpInside" id="rFw-0k-bur"/>
+                                    <action selector="loginButtonPressed:" destination="m3i-j6-ZJk" eventType="touchUpInside" id="dH2-sB-IiT"/>
                                 </connections>
                             </button>
                         </subviews>
