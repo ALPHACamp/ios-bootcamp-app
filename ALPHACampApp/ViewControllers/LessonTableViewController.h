@@ -10,6 +10,5 @@
 
 @interface LessonTableViewController : UITableViewController
 @property (strong, nonatomic)NSArray *lessonArray;
-@property (strong, nonatomic)NSArray *sectionArray;
 @property (strong, nonatomic)NSString *headerTitle;
 @end

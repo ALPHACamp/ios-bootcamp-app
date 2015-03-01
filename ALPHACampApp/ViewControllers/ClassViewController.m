@@ -130,9 +130,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (!self.sectionArray.count) {
-        return 3;
-    }else
     return self.sectionArray.count;
     
 }
@@ -167,13 +164,9 @@
         cell.textLabel.textColor = [UIColor grayColor];
         cell.textLabel.font =[UIFont systemFontOfSize:15];
         cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.text= [NSString stringWithFormat:@"%@",self.sectionArray[indexPath.row][@"section"][@"name"]];
     } else {
         NSLog(@"I have been initialize. Row = %li", (long)indexPath.row);
-    }
-    if (!self.sectionArray) {
-        cell.textLabel.text=@"";
-    }else{
-    cell.textLabel.text= [NSString stringWithFormat:@"%@",self.sectionArray[indexPath.row][@"section"][@"name"]];
     }
     
     return cell;

@@ -9,6 +9,9 @@
 #import "ProfileViewController.h"
 #import "WelcomeViewController.h"
 #import <Parse/Parse.h>
+#import <AFNetworking.h>
+
+#define api_key @"21f7814731bbbcc3302fbe06194e53c4993a3976"
 
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButton;
@@ -30,23 +33,23 @@
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
-    [PFUser logOut];
-    //PFUser *currentUser = [PFUser currentUser]; // this will now be nil
-    WelcomeViewController *rootVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
-    [self.navigationController pushViewController:rootVC animated:YES];
-     
-    
+    //[PFUser logOut];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *authToken = [NSString stringWithFormat:@"%@", [userDefaults stringForKey:@"auth_token"]];
+    NSDictionary *parameters = @{
+                                 @"api_key": api_key,
+                                 @"auth_token": authToken};
+    [manager POST:@"https://school.alphacamp.co/api/v1/logout"
+       parameters:parameters
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              WelcomeViewController *rootVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+              [self.navigationController pushViewController:rootVC animated:YES];
+
+              
+          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"Login out Error: %@", error);
+        }];
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
