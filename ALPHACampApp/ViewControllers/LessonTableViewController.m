@@ -20,11 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView reloadData];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,6 +61,19 @@
 
     return cell;
 
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *headerLabel = [[UILabel alloc]init];
+    
+    headerLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, 40.0);
+    headerLabel.textColor =[ UIColor blackColor];
+    headerLabel.text = [NSString stringWithFormat:@"    %@",self.headerTitle];
+    headerLabel.backgroundColor =[UIColor lightGrayColor];
+    
+    return headerLabel;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
