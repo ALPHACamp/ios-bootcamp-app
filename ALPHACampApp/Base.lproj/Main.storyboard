@@ -369,6 +369,32 @@
             </objects>
             <point key="canvasLocation" x="-41" y="540"/>
         </scene>
+        <!--Lesson Table View Controller-->
+        <scene sceneID="UOX-kt-HfD">
+            <objects>
+                <tableViewController storyboardIdentifier="LessonTableViewController" id="c6i-Ob-ZBU" customClass="LessonTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zUM-sW-NT7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lTZ-vt-yXK">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lTZ-vt-yXK" id="IFS-3E-z2w">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c6i-Ob-ZBU" id="cAy-6a-Zoa"/>
+                            <outlet property="delegate" destination="c6i-Ob-ZBU" id="v2a-Da-ZSd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9Y-H8-LBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="1152"/>
+        </scene>
         <!--Class Detail View Controller-->
         <scene sceneID="pNf-tz-zoh">
             <objects>
@@ -391,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idv-v6-5k2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="450" y="1152"/>
+            <point key="canvasLocation" x="813" y="1140"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="pM0-gg-la3">

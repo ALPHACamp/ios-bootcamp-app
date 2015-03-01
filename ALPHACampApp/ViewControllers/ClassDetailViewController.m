@@ -8,22 +8,35 @@
 
 #import "ClassDetailViewController.h"
 
-@interface ClassDetailViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@interface ClassDetailViewController ()<UIWebViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @end
 
 @implementation ClassDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.refreshControl beginRefreshing];
     // Do any additional setup after loading the view.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
-    
-    NSString *fullURL = @"http://alphacamp.co";
-    NSURL *url = [NSURL URLWithString:fullURL];
+    self.webView.delegate =self;
+    //NSString *fullURL = self.webViewURL;
+    NSURL *url = [NSURL URLWithString:self.webViewURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
+}
+
+//在載入網頁時，預先輸入user帳號密碼
+-(void)webViewDidFinishLoad:(UIWebView *)webView;{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [defaults objectForKey:@"userName"];
+    NSString *password = [defaults objectForKey:@"password"];
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[email]')[0].value = '%@';",userName]];
+   [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[password]')[0].value = '%@';",password]];
+     [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('commit')[0].click();"];
+    [self.refreshControl endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {

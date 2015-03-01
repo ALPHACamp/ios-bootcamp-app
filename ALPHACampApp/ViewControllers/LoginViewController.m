@@ -56,7 +56,8 @@
               
               NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
               [userDefaults setObject:self.auth_token forKey:@"auth_token"];
-              
+              [userDefaults setObject:self.emailTextField.text forKey:@"userName"];
+              [userDefaults setObject:self.passwordTextField.text forKey:@"password"];
               [userDefaults synchronize];
               
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

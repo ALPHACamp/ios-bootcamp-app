@@ -7,6 +7,7 @@
 //
 
 #import "ClassViewController.h"
+#import "LessonTableViewController.h"
 #import <AFNetworking/AFNetworking.h>
 
 #define api_key @"21f7814731bbbcc3302fbe06194e53c4993a3976"
@@ -69,10 +70,6 @@
                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                //NSLog(@"Section: %@", responseObject);
                                self.sectionArray=responseObject[@"syllabus"];
-                               NSLog(@"syllabus: %lu", self.sectionArray.count);
-                               for (int i =0; i<self.sectionArray.count; i++) {
-                                   NSLog(@"section:%@", self.sectionArray[i][@"section"][@"name"]);
-                               }
                                [self.classTableView reloadData];
                                
                            }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -134,12 +131,6 @@
         cell.textLabel.textColor = [UIColor grayColor];
         cell.textLabel.font =[UIFont systemFontOfSize:15];
         cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
-        
-        //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-        
-       
-        
     } else {
         //NSLog(@"I have been initialize. Row = %li", (long)indexPath.row);
     }
@@ -151,6 +142,16 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"tapped!");
+    
+    LessonTableViewController *lessonTVC= [self.storyboard instantiateViewControllerWithIdentifier:@"LessonTableViewController"];
+    lessonTVC.lessonArray = self.sectionArray[indexPath.row][@"lessons"];
+    NSLog(@"rows: %lu", lessonTVC.lessonArray.count);
+    
+     [self.navigationController pushViewController:lessonTVC animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
