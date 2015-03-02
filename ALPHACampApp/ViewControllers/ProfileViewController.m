@@ -31,8 +31,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)logoutButtonPressed:(id)sender {
+- (IBAction)logoutButton:(id)sender {
     //[PFUser logOut];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -45,11 +44,12 @@
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               WelcomeViewController *rootVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
               [self.navigationController pushViewController:rootVC animated:YES];
-
               
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Login out Error: %@", error);
-        }];
+          }];
 }
+
+
 
 @end

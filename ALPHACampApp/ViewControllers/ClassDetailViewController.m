@@ -27,8 +27,11 @@
     
     //improve WebView loading performance
     self.suppressesIncrementalRendering =YES;
+    
+    //set delegate to self
     self.webView.delegate =self;
-    //NSString *fullURL = self.webViewURL;
+    
+    //set url
     NSURL *url = [NSURL URLWithString:self.webViewURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
