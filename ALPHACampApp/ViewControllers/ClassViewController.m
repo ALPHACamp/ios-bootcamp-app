@@ -169,11 +169,11 @@
         cell.textLabel.textColor = [UIColor grayColor];
         cell.textLabel.font =[UIFont systemFontOfSize:15];
         cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-        cell.textLabel.text= [NSString stringWithFormat:@"%@",self.sectionArray[indexPath.row][@"section"][@"name"]];
+        
     } else {
         NSLog(@"I have been initialize. Row = %li", (long)indexPath.row);
     }
-    
+    cell.textLabel.text= [NSString stringWithFormat:@"%@",self.sectionArray[indexPath.row][@"section"][@"name"]];
     return cell;
 }
 

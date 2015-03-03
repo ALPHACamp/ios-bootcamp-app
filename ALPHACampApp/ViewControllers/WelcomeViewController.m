@@ -23,7 +23,7 @@
     self.loginButton.layer.cornerRadius =5.0f;
     self.signupButton.layer.cornerRadius =5.0f;
     self.signupButton.hidden =YES;
-    //self.loginButton.hidden =YES;
+    self.loginButton.hidden =YES;
     
     [self.indicator startAnimating];
     
@@ -35,6 +35,7 @@
         [self presentViewController:tabBarVC animated:YES completion:nil];
     }else{
         self.indicator.hidden =YES;
+        self.loginButton.hidden =NO;
     }
     
     
