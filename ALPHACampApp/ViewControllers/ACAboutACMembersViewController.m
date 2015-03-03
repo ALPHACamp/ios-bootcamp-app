@@ -126,7 +126,11 @@
                          @"teacher" : self.teacherArray,
                          @"alumni" : self.alumniArray
                          };
-    self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"staff"], nil];
+    
+    // 先確認dictionary 裡的value是否為Array
+    if ([self.userDataDict[@"staff"] isKindOfClass:[NSArray class]]) {
+        self.currentArray = self.userDataDict[@"staff"];
+    }
     [self refreshView];
     
     
@@ -135,10 +139,17 @@
     arrayCount =0;
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark ButtonPressed
+
 - (void)nextButtonPressed: (id)sender{
     
     arrayCount ++;
-    if (arrayCount >= [self.currentArray[0] count]) {
+    if (arrayCount >= self.currentArray.count) {
         arrayCount =0;
         [self refreshView];
         
@@ -147,33 +158,30 @@
     }
 }
 
-- (void) refreshView{
-    
-    self.headImageView.image= [self.currentArray[0][arrayCount] image];
-    self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[0][arrayCount] firstName],[self.currentArray[0][arrayCount] lastName] ];
-    self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[0][arrayCount] intro]];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark SegmentedControlSwitch
 
 - (IBAction)segmentedControlSwitch:(id)sender {
     
     switch (self.segmentedControl.selectedSegmentIndex) {
         case 0:
-            self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"staff"], nil];
+            if ([self.userDataDict[@"staff"] isKindOfClass:[NSArray class]]) {
+                self.currentArray = self.userDataDict[@"staff"];
+            }
             [self refreshView];
             
             break;
         case 1:
-            self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"teacher"], nil];
+            if ([self.userDataDict[@"teacher"] isKindOfClass:[NSArray class]]) {
+                NSLog(@"YES!!");
+                self.currentArray = self.userDataDict[@"teacher"];
+            }
             [self refreshView];
             break;
         case 2:
-            self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"alumni"], nil];
+            if ([self.userDataDict[@"alumni"] isKindOfClass:[NSArray class]]) {
+                self.currentArray = self.userDataDict[@"alumni"];
+            }
+            
             [self refreshView];
             
             
@@ -181,19 +189,20 @@
         default:
             break;
     }
-    
 }
 
+#pragma mark - refreshView
 
+- (void) refreshView{
+    
+    self.headImageView.image= [self.currentArray[arrayCount] image];
+    self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[arrayCount] firstName],[self.currentArray[arrayCount] lastName] ];
+    self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[arrayCount] intro]];
+    
+//    self.headImageView.image= [self.currentArray[0][arrayCount] image];
+//    self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[0][arrayCount] firstName],[self.currentArray[0][arrayCount] lastName] ];
+//    self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[0][arrayCount] intro]];
+}
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

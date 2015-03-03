@@ -245,7 +245,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
         <!--AboutAC Members View Controller-->
         <scene sceneID="bkk-Nf-9jC">
             <objects>
-                <viewController id="fxv-9Y-iHI" customClass="ACAboutACMembersViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fxv-9Y-iHI" customClass="ACAboutACMembersViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHA-d8-c4i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -517,7 +517,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
         <!--Class Detail View Controller-->
         <scene sceneID="pNf-tz-zoh">
             <objects>
-                <viewController storyboardIdentifier="classDetailViewController" id="wCY-n6-Bte" customClass="ClassDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="classDetailViewController" hidesBottomBarWhenPushed="YES" id="wCY-n6-Bte" customClass="ClassDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bk0-e9-FLp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

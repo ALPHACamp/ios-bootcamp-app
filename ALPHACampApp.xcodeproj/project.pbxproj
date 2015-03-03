@@ -258,14 +258,14 @@
 				E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */,
 				E80596F51A714F77008B73F3 /* ClassDetailViewController.h */,
 				E80596F61A714F77008B73F3 /* ClassDetailViewController.m */,
-				E84393DB1A66746B00A09E36 /* ProfileViewController.h */,
-				E84393DC1A66746B00A09E36 /* ProfileViewController.m */,
-				E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */,
-				E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */,
 				E8AFF2F41AA6139E00000C41 /* ACAboutACViewController.h */,
 				E8AFF2F51AA6139E00000C41 /* ACAboutACViewController.m */,
 				E8AFF2F71AA613BD00000C41 /* ACAboutACMembersViewController.h */,
 				E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */,
+				E84393DB1A66746B00A09E36 /* ProfileViewController.h */,
+				E84393DC1A66746B00A09E36 /* ProfileViewController.m */,
+				E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */,
+				E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
