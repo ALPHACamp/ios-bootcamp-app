@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="-95" y="-140"/>
         </scene>
-        <!--More View Controller-->
+        <!--AboutAC View Controller-->
         <scene sceneID="IUp-Wa-YzD">
             <objects>
-                <viewController id="LLb-2t-5vj" customClass="ACMoreViewController" sceneMemberID="viewController">
+                <viewController id="LLb-2t-5vj" customClass="ACAboutACViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13t-bv-F8V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,7 +228,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                     <navigationItem key="navigationItem" id="aVD-j2-xsc">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="FTL-2C-jer">
                             <connections>
-                                <action selector="logoutButtonPressed:" destination="LLb-2t-5vj" id="mtL-QB-Qnu"/>
+                                <action selector="logoutButtonPressed:" destination="LLb-2t-5vj" id="SZw-qo-AZw"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" style="plain" id="7Pb-H0-PEb">
@@ -242,10 +242,10 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
             </objects>
             <point key="canvasLocation" x="-267" y="1867"/>
         </scene>
-        <!--More Detail View Controller-->
+        <!--AboutAC Members View Controller-->
         <scene sceneID="bkk-Nf-9jC">
             <objects>
-                <viewController id="fxv-9Y-iHI" customClass="ACMoreDetailViewController" sceneMemberID="viewController">
+                <viewController id="fxv-9Y-iHI" customClass="ACAboutACMembersViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHA-d8-c4i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +270,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                                     <segment title="BootCamp校友"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentedControlSwitch:" destination="fxv-9Y-iHI" eventType="valueChanged" id="zkO-sq-9Gy"/>
+                                    <action selector="segmentedControlSwitch:" destination="fxv-9Y-iHI" eventType="valueChanged" id="RtM-re-ssN"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d0A-mk-xwP">
@@ -293,11 +293,11 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                     <navigationItem key="navigationItem" id="ZTQ-LZ-JtR"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="headImageView" destination="TtV-Tp-aqO" id="9ey-4Q-D9Z"/>
-                        <outlet property="introLabel" destination="F4m-Qj-qN7" id="JRu-kG-N8w"/>
-                        <outlet property="nameLabel" destination="zPp-aK-T38" id="fBe-QX-Yds"/>
-                        <outlet property="nextButton" destination="d0A-mk-xwP" id="vKW-dO-MFV"/>
-                        <outlet property="segmentedControl" destination="Nbn-iy-0jf" id="svJ-CF-AEs"/>
+                        <outlet property="headImageView" destination="TtV-Tp-aqO" id="hWt-1w-VzX"/>
+                        <outlet property="introLabel" destination="F4m-Qj-qN7" id="vQT-04-hcL"/>
+                        <outlet property="nameLabel" destination="zPp-aK-T38" id="wc1-SA-Bhr"/>
+                        <outlet property="nextButton" destination="d0A-mk-xwP" id="GUM-Fd-RG0"/>
+                        <outlet property="segmentedControl" destination="Nbn-iy-0jf" id="sZg-Un-QmW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5h-Oi-QSx" userLabel="First Responder" sceneMemberID="firstResponder"/>

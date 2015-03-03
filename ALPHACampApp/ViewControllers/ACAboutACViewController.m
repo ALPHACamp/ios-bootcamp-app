@@ -1,22 +1,22 @@
 //
-//  ACMoreViewController.m
+//  ACAboutACViewController.m
 //  ALPHACampApp
 //
-//  Created by PiHan Hsu on 2015/3/3.
+//  Created by PiHan Hsu on 2015/3/4.
 //  Copyright (c) 2015年 PiHan Hsu. All rights reserved.
 //
 
-#import "ACMoreViewController.h"
+#import "ACAboutACViewController.h"
 #import "WelcomeViewController.h"
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFNetworking.h> 
 
 #define api_key @"21f7814731bbbcc3302fbe06194e53c4993a3976"
 
-@interface ACMoreViewController ()
+@interface ACAboutACViewController ()
 
 @end
 
-@implementation ACMoreViewController
+@implementation ACAboutACViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -28,10 +28,8 @@
 		E84393E61A6675FA00A09E36 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393E51A6675FA00A09E36 /* LoginViewController.m */; };
 		E84393E81A6684A400A09E36 /* alpha-logo-long.png in Resources */ = {isa = PBXBuildFile; fileRef = E84393E71A6684A400A09E36 /* alpha-logo-long.png */; };
 		E8AFF2C41AA33E2E00000C41 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */; };
-		E8AFF2C71AA4C08500000C41 /* ACMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2C61AA4C08500000C41 /* ACMoreViewController.m */; };
 		E8AFF2C91AA4CA7D00000C41 /* alpha-icon@60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2C81AA4CA7D00000C41 /* alpha-icon@60x60.png */; };
 		E8AFF2CB1AA4CACB00000C41 /* alpha-icon@40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2CA1AA4CACB00000C41 /* alpha-icon@40x40.png */; };
-		E8AFF2CE1AA4CB6E00000C41 /* ACMoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2CD1AA4CB6E00000C41 /* ACMoreDetailViewController.m */; };
 		E8AFF2D41AA5C69D00000C41 /* Tim.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2CF1AA5C69D00000C41 /* Tim.png */; };
 		E8AFF2D51AA5C69D00000C41 /* Ariel.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2D01AA5C69D00000C41 /* Ariel.png */; };
 		E8AFF2D61AA5C69D00000C41 /* Benson.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2D11AA5C69D00000C41 /* Benson.png */; };
@@ -50,6 +48,8 @@
 		E8AFF2F11AA60FFD00000C41 /* AmosLee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2EC1AA60FFD00000C41 /* AmosLee.jpg */; };
 		E8AFF2F21AA60FFD00000C41 /* Peter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2ED1AA60FFD00000C41 /* Peter.jpg */; };
 		E8AFF2F31AA60FFD00000C41 /* Shyne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2EE1AA60FFD00000C41 /* Shyne.jpg */; };
+		E8AFF2F61AA6139E00000C41 /* ACAboutACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2F51AA6139E00000C41 /* ACAboutACViewController.m */; };
+		E8AFF2F91AA613BD00000C41 /* ACAboutACMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */; };
 		E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */; };
 		E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA91A77D44D00EDA316 /* User.m */; };
 		E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */; };
@@ -103,12 +103,8 @@
 		E84393E71A6684A400A09E36 /* alpha-logo-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "alpha-logo-long.png"; path = "ViewControllers/alpha-logo-long.png"; sourceTree = "<group>"; };
 		E8AFF2C21AA33E2E00000C41 /* LessonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonTableViewController.h; sourceTree = "<group>"; };
 		E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
-		E8AFF2C51AA4C08500000C41 /* ACMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMoreViewController.h; sourceTree = "<group>"; };
-		E8AFF2C61AA4C08500000C41 /* ACMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMoreViewController.m; sourceTree = "<group>"; };
 		E8AFF2C81AA4CA7D00000C41 /* alpha-icon@60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon@60x60.png"; sourceTree = "<group>"; };
 		E8AFF2CA1AA4CACB00000C41 /* alpha-icon@40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon@40x40.png"; sourceTree = "<group>"; };
-		E8AFF2CC1AA4CB6E00000C41 /* ACMoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMoreDetailViewController.h; sourceTree = "<group>"; };
-		E8AFF2CD1AA4CB6E00000C41 /* ACMoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMoreDetailViewController.m; sourceTree = "<group>"; };
 		E8AFF2CF1AA5C69D00000C41 /* Tim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tim.png; sourceTree = "<group>"; };
 		E8AFF2D01AA5C69D00000C41 /* Ariel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ariel.png; sourceTree = "<group>"; };
 		E8AFF2D11AA5C69D00000C41 /* Benson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Benson.png; sourceTree = "<group>"; };
@@ -127,6 +123,10 @@
 		E8AFF2EC1AA60FFD00000C41 /* AmosLee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AmosLee.jpg; sourceTree = "<group>"; };
 		E8AFF2ED1AA60FFD00000C41 /* Peter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Peter.jpg; sourceTree = "<group>"; };
 		E8AFF2EE1AA60FFD00000C41 /* Shyne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shyne.jpg; sourceTree = "<group>"; };
+		E8AFF2F41AA6139E00000C41 /* ACAboutACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAboutACViewController.h; sourceTree = "<group>"; };
+		E8AFF2F51AA6139E00000C41 /* ACAboutACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutACViewController.m; sourceTree = "<group>"; };
+		E8AFF2F71AA613BD00000C41 /* ACAboutACMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAboutACMembersViewController.h; sourceTree = "<group>"; };
+		E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutACMembersViewController.m; sourceTree = "<group>"; };
 		E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		E8EA3BA81A77D44D00EDA316 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -258,14 +258,14 @@
 				E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */,
 				E80596F51A714F77008B73F3 /* ClassDetailViewController.h */,
 				E80596F61A714F77008B73F3 /* ClassDetailViewController.m */,
-				E8AFF2C51AA4C08500000C41 /* ACMoreViewController.h */,
-				E8AFF2C61AA4C08500000C41 /* ACMoreViewController.m */,
-				E8AFF2CC1AA4CB6E00000C41 /* ACMoreDetailViewController.h */,
-				E8AFF2CD1AA4CB6E00000C41 /* ACMoreDetailViewController.m */,
 				E84393DB1A66746B00A09E36 /* ProfileViewController.h */,
 				E84393DC1A66746B00A09E36 /* ProfileViewController.m */,
 				E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */,
 				E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */,
+				E8AFF2F41AA6139E00000C41 /* ACAboutACViewController.h */,
+				E8AFF2F51AA6139E00000C41 /* ACAboutACViewController.m */,
+				E8AFF2F71AA613BD00000C41 /* ACAboutACMembersViewController.h */,
+				E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8AFF2CE1AA4CB6E00000C41 /* ACMoreDetailViewController.m in Sources */,
+				E8AFF2F61AA6139E00000C41 /* ACAboutACViewController.m in Sources */,
 				E84393E61A6675FA00A09E36 /* LoginViewController.m in Sources */,
 				E823E9B11A5ED4DA00FD86D1 /* AppDelegate.m in Sources */,
 				E84393D71A66744100A09E36 /* EventViewController.m in Sources */,
@@ -478,9 +478,9 @@
 				E8AFF2C41AA33E2E00000C41 /* LessonTableViewController.m in Sources */,
 				E84393E31A6675EC00A09E36 /* RegisterViewController.m in Sources */,
 				E80596FC1A716015008B73F3 /* EventDetailViewController.m in Sources */,
+				E8AFF2F91AA613BD00000C41 /* ACAboutACMembersViewController.m in Sources */,
 				E84393DA1A66745A00A09E36 /* ClassViewController.m in Sources */,
 				E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */,
-				E8AFF2C71AA4C08500000C41 /* ACMoreViewController.m in Sources */,
 				E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */,
 				E80596F71A714F77008B73F3 /* ClassDetailViewController.m in Sources */,
 				E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */,

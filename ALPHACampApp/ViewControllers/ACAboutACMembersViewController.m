@@ -1,15 +1,15 @@
 //
-//  ACMoreDetailViewController.m
+//  ACAboutACMembersViewController.m
 //  ALPHACampApp
 //
-//  Created by PiHan Hsu on 2015/3/3.
+//  Created by PiHan Hsu on 2015/3/4.
 //  Copyright (c) 2015年 PiHan Hsu. All rights reserved.
 //
 
-#import "ACMoreDetailViewController.h"
+#import "ACAboutACMembersViewController.h"
 #import "User.h"
 
-@interface ACMoreDetailViewController (){
+@interface ACAboutACMembersViewController (){
     int arrayCount;
 }
 
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation ACMoreDetailViewController
+@implementation ACAboutACMembersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,11 +71,11 @@
     User *tPeter =[User initWithfirstName:@"Peter" lastName:@"Pan"];
     tPeter.image =[UIImage imageNamed:@"Peter.jpg"];
     tPeter.intro =@"暢銷書 App 程式設計入門 - iPhone. iPad作者，MacToday App 開發專欄作家，FUNTEK 首席 iOS App 工程師，點點數位 iOS App 顧問，PChome Mac 基礎教室專欄作家，開發 Wealthy、LOCOMO 運動記錄等知名App";
-
+    
     User *tEdward =[User initWithfirstName:@"Edward" lastName:@"Chiang"];
     tEdward.image =[UIImage imageNamed:@"Edward.jpg"];
     tEdward.intro =@"App 開發顧問. 日傑資訊負責人，前愛料理 App 開發隊長，寫過 LovingHeart for iOS, for Android, 愛料理 for iPhone, 愛料理 for iPad, Mr. Plurk for iOS 等知名五星等級 App";
-
+    
     User *tAmos =[User initWithfirstName:@"Amos" lastName:@"Lee"];
     tAmos.image =[UIImage imageNamed:@"AmosLee.jpg"];
     tAmos.intro =@"天橋科技視覺設計總監，資策會講師，資深前端設計師，致力於CSS技術研究與教學";
@@ -113,7 +113,7 @@
     User *aAmos =[User initWithfirstName:@"Amos" lastName:@"Chen"];
     aAmos.image =[UIImage imageNamed:@"AmosChen.jpg"];
     aAmos.intro =@"台大心理系，熱愛戲劇表演與幕後硬體技術，工作之餘與朋友共組戲團表演，曾演出於台北藝穗節。看好網路產業前景，對全端開發有濃厚興趣，希望在 ALPHA Camp 累積前後端開發的能力，轉型成為網站系統工程師。";
-
+    
     
     //add Objects into Array with Literal Syntax
     self.staffArray =@[sBernard,sTim,sAriel,sEvelyn,sihower,sBenson];
@@ -128,7 +128,7 @@
                          };
     self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"staff"], nil];
     [self refreshView];
-   
+    
     
     //set up next Button
     [self.nextButton addTarget:self action:@selector(nextButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -141,7 +141,7 @@
     if (arrayCount >= [self.currentArray[0] count]) {
         arrayCount =0;
         [self refreshView];
-
+        
     }else{
         [self refreshView];
     }
@@ -166,7 +166,7 @@
         case 0:
             self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"staff"], nil];
             [self refreshView];
-           
+            
             break;
         case 1:
             self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"teacher"], nil];
@@ -175,7 +175,7 @@
         case 2:
             self.currentArray =[[NSArray alloc]initWithObjects:self.userDataDict[@"alumni"], nil];
             [self refreshView];
-
+            
             
             break;
         default:
@@ -187,13 +187,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
