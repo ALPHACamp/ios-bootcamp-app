@@ -67,13 +67,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ALPHACampApp/ViewControllers/ACMoreDetailViewController.m"
-            timestampString = "447081023.051029"
+            filePath = "ALPHACampApp/ViewControllers/ClassDetailViewController.m"
+            timestampString = "447082815.54368"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-nextButtonPressed:"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-webViewDidFinishLoad:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -83,13 +83,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ALPHACampApp/ViewControllers/ClassDetailViewController.m"
-            timestampString = "447082815.54368"
+            filePath = "ALPHACampApp/ViewControllers/ACMoreDetailViewController.m"
+            timestampString = "447091057.985881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-webViewDidFinishLoad:"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "-nextButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
