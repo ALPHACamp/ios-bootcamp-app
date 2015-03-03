@@ -23,7 +23,11 @@
     [super viewDidLoad];
     // show navigationBar to go back
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
+    //improve webView loading performance
     self.suppressesIncrementalRendering =YES;
+    
+    
     [self.indicatorView startAnimating];
     self.webView.delegate = self;
     //setup WebView URL

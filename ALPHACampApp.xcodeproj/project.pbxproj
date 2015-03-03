@@ -28,6 +28,15 @@
 		E84393E61A6675FA00A09E36 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393E51A6675FA00A09E36 /* LoginViewController.m */; };
 		E84393E81A6684A400A09E36 /* alpha-logo-long.png in Resources */ = {isa = PBXBuildFile; fileRef = E84393E71A6684A400A09E36 /* alpha-logo-long.png */; };
 		E8AFF2C41AA33E2E00000C41 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */; };
+		E8AFF2C71AA4C08500000C41 /* ACMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2C61AA4C08500000C41 /* ACMoreViewController.m */; };
+		E8AFF2C91AA4CA7D00000C41 /* alpha-icon@60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2C81AA4CA7D00000C41 /* alpha-icon@60x60.png */; };
+		E8AFF2CB1AA4CACB00000C41 /* alpha-icon@40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2CA1AA4CACB00000C41 /* alpha-icon@40x40.png */; };
+		E8AFF2CE1AA4CB6E00000C41 /* ACMoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2CD1AA4CB6E00000C41 /* ACMoreDetailViewController.m */; };
+		E8AFF2D41AA5C69D00000C41 /* Tim.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2CF1AA5C69D00000C41 /* Tim.png */; };
+		E8AFF2D51AA5C69D00000C41 /* Ariel.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2D01AA5C69D00000C41 /* Ariel.png */; };
+		E8AFF2D61AA5C69D00000C41 /* Benson.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2D11AA5C69D00000C41 /* Benson.png */; };
+		E8AFF2D71AA5C69D00000C41 /* Evelyn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2D21AA5C69D00000C41 /* Evelyn.jpg */; };
+		E8AFF2D81AA5C69D00000C41 /* ihower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2D31AA5C69D00000C41 /* ihower.jpg */; };
 		E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */; };
 		E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA91A77D44D00EDA316 /* User.m */; };
 		E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */; };
@@ -81,6 +90,17 @@
 		E84393E71A6684A400A09E36 /* alpha-logo-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "alpha-logo-long.png"; path = "ViewControllers/alpha-logo-long.png"; sourceTree = "<group>"; };
 		E8AFF2C21AA33E2E00000C41 /* LessonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonTableViewController.h; sourceTree = "<group>"; };
 		E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonTableViewController.m; sourceTree = "<group>"; };
+		E8AFF2C51AA4C08500000C41 /* ACMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMoreViewController.h; sourceTree = "<group>"; };
+		E8AFF2C61AA4C08500000C41 /* ACMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMoreViewController.m; sourceTree = "<group>"; };
+		E8AFF2C81AA4CA7D00000C41 /* alpha-icon@60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon@60x60.png"; sourceTree = "<group>"; };
+		E8AFF2CA1AA4CACB00000C41 /* alpha-icon@40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon@40x40.png"; sourceTree = "<group>"; };
+		E8AFF2CC1AA4CB6E00000C41 /* ACMoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMoreDetailViewController.h; sourceTree = "<group>"; };
+		E8AFF2CD1AA4CB6E00000C41 /* ACMoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMoreDetailViewController.m; sourceTree = "<group>"; };
+		E8AFF2CF1AA5C69D00000C41 /* Tim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tim.png; sourceTree = "<group>"; };
+		E8AFF2D01AA5C69D00000C41 /* Ariel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ariel.png; sourceTree = "<group>"; };
+		E8AFF2D11AA5C69D00000C41 /* Benson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Benson.png; sourceTree = "<group>"; };
+		E8AFF2D21AA5C69D00000C41 /* Evelyn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Evelyn.jpg; sourceTree = "<group>"; };
+		E8AFF2D31AA5C69D00000C41 /* ihower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ihower.jpg; sourceTree = "<group>"; };
 		E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		E8EA3BA81A77D44D00EDA316 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -161,9 +181,16 @@
 		E823E9AB1A5ED4DA00FD86D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E8AFF2CA1AA4CACB00000C41 /* alpha-icon@40x40.png */,
 				E80596B71A7144A6008B73F3 /* event@2x.png */,
 				E80596B81A7144A6008B73F3 /* profile@2x.png */,
 				E80596B91A7144A6008B73F3 /* class_@2x.png */,
+				E8AFF2C81AA4CA7D00000C41 /* alpha-icon@60x60.png */,
+				E8AFF2CF1AA5C69D00000C41 /* Tim.png */,
+				E8AFF2D01AA5C69D00000C41 /* Ariel.png */,
+				E8AFF2D11AA5C69D00000C41 /* Benson.png */,
+				E8AFF2D21AA5C69D00000C41 /* Evelyn.jpg */,
+				E8AFF2D31AA5C69D00000C41 /* ihower.jpg */,
 				E80596AD1A713DFB008B73F3 /* Bernard Photo.png */,
 				E84393E71A6684A400A09E36 /* alpha-logo-long.png */,
 				E823E9AF1A5ED4DA00FD86D1 /* AppDelegate.h */,
@@ -210,10 +237,14 @@
 				E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */,
 				E80596F51A714F77008B73F3 /* ClassDetailViewController.h */,
 				E80596F61A714F77008B73F3 /* ClassDetailViewController.m */,
+				E8AFF2C51AA4C08500000C41 /* ACMoreViewController.h */,
+				E8AFF2C61AA4C08500000C41 /* ACMoreViewController.m */,
 				E84393DB1A66746B00A09E36 /* ProfileViewController.h */,
 				E84393DC1A66746B00A09E36 /* ProfileViewController.m */,
 				E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */,
 				E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */,
+				E8AFF2CC1AA4CB6E00000C41 /* ACMoreDetailViewController.h */,
+				E8AFF2CD1AA4CB6E00000C41 /* ACMoreDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -275,6 +306,7 @@
 		E823E9A01A5ED4DA00FD86D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = AC;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "PiHan Hsu";
 				TargetAttributes = {
@@ -312,12 +344,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AFF2D41AA5C69D00000C41 /* Tim.png in Resources */,
 				E80596AE1A713DFB008B73F3 /* Bernard Photo.png in Resources */,
+				E8AFF2CB1AA4CACB00000C41 /* alpha-icon@40x40.png in Resources */,
 				E823E9BA1A5ED4DA00FD86D1 /* Main.storyboard in Resources */,
 				E80596BA1A7144A6008B73F3 /* event@2x.png in Resources */,
+				E8AFF2D51AA5C69D00000C41 /* Ariel.png in Resources */,
+				E8AFF2D61AA5C69D00000C41 /* Benson.png in Resources */,
 				E84393E81A6684A400A09E36 /* alpha-logo-long.png in Resources */,
 				E823E9BF1A5ED4DA00FD86D1 /* LaunchScreen.xib in Resources */,
 				E823E9BC1A5ED4DA00FD86D1 /* Images.xcassets in Resources */,
+				E8AFF2D71AA5C69D00000C41 /* Evelyn.jpg in Resources */,
+				E8AFF2C91AA4CA7D00000C41 /* alpha-icon@60x60.png in Resources */,
+				E8AFF2D81AA5C69D00000C41 /* ihower.jpg in Resources */,
 				E80596BB1A7144A6008B73F3 /* profile@2x.png in Resources */,
 				E80596BC1A7144A6008B73F3 /* class_@2x.png in Resources */,
 			);
@@ -370,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AFF2CE1AA4CB6E00000C41 /* ACMoreDetailViewController.m in Sources */,
 				E84393E61A6675FA00A09E36 /* LoginViewController.m in Sources */,
 				E823E9B11A5ED4DA00FD86D1 /* AppDelegate.m in Sources */,
 				E84393D71A66744100A09E36 /* EventViewController.m in Sources */,
@@ -380,6 +420,7 @@
 				E80596FC1A716015008B73F3 /* EventDetailViewController.m in Sources */,
 				E84393DA1A66745A00A09E36 /* ClassViewController.m in Sources */,
 				E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */,
+				E8AFF2C71AA4C08500000C41 /* ACMoreViewController.m in Sources */,
 				E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */,
 				E80596F71A714F77008B73F3 /* ClassDetailViewController.m in Sources */,
 				E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */,

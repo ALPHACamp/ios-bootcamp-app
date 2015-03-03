@@ -89,6 +89,10 @@
      
              // 用actionsheet 來選擇課程
              UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+             UIAlertAction * cancel =[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+             }];
+             [alertController addAction:cancel];
+
               for (int i=0; i < self.courseArray.count; i++) {
                   UIAlertAction *action =[UIAlertAction actionWithTitle:self.courseArray[i][@"name"] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                       //抓取課程資料
@@ -112,7 +116,8 @@
                                NSLog(@"Get Section Error: %@", error);
                            }];
                   }];
-                  [alertController addAction:action];
+                [alertController addAction:action];
+                  
               }
                [self presentViewController:alertController animated:YES completion:nil];
          }failure:^(AFHTTPRequestOperation *operation, NSError *error) {

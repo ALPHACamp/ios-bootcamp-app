@@ -10,4 +10,13 @@
 
 @implementation User
 
++(id)initWithfirstName:(NSString *)firstName lastName:(NSString *)lastName{
+    
+    User * user =[[User alloc]init];
+    user.firstName =firstName;
+    user.lastName =lastName;
+    
+    return user;
+}
+
 @end

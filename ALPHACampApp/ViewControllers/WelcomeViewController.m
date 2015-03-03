@@ -12,6 +12,7 @@
 @interface WelcomeViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *signupButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @end
 
@@ -22,6 +23,22 @@
     self.loginButton.layer.cornerRadius =5.0f;
     self.signupButton.layer.cornerRadius =5.0f;
     self.signupButton.hidden =YES;
+    //self.loginButton.hidden =YES;
+    
+    [self.indicator startAnimating];
+    
+    NSUserDefaults * defaults =[NSUserDefaults standardUserDefaults];
+    NSString *auth_token =[defaults objectForKey:@"auth_token"];
+    if (auth_token) {
+        UITabBarController *tabBarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+        [tabBarVC setSelectedIndex:0];
+        [self presentViewController:tabBarVC animated:YES completion:nil];
+    }else{
+        self.indicator.hidden =YES;
+    }
+    
+    
+    
     
     //若已經登入過, user會存在cache中,則可跳過login過程, for Parse
 //    PFUser *currentUser = [PFUser currentUser];
