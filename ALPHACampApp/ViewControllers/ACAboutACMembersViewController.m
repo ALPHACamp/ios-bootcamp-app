@@ -218,11 +218,13 @@
 
 - (void) refreshView{
     
-    if (currentIndex >= self.currentArray.count) {
+    if (currentIndex == -1) {
+        currentIndex =(int)self.currentArray.count -1;
+        
+    }else if (currentIndex >=  self.currentArray.count){
         currentIndex =0;
-    }else if (currentIndex < 0){
-        currentIndex = (int)self.currentArray.count;
     }
+ 
     self.headImageView.image= [self.currentArray[currentIndex] image];
     self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[currentIndex] firstName],[self.currentArray[currentIndex] lastName] ];
     self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[currentIndex] intro]];
