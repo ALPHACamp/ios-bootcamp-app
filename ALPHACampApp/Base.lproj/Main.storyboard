@@ -204,18 +204,18 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="臺灣第一間新創事業人才培育學校" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hdF-nv-w94">
                                 <rect key="frame" x="23" y="156" width="274" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alpha-logo-long.png" id="1DI-TK-e0p">
-                                <rect key="frame" x="56" y="90" width="209" height="50"/>
+                                <rect key="frame" x="55" y="90" width="209" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Rfu-hD-oNp">
                                 <rect key="frame" x="23" y="256" width="274" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">我們希望以紮實的實務課程，激發台灣有心在國際數位產業闖出一片天的人才，不只預約未來的實力，更進一步將台灣人才正式與國際接軌。
 ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊密結合。讓學員透過課程、導師、同學，更加認識自己、與釐清目標，精準投放創業精力。我們希望，所有學員都能在課程結束後，帶著技術、勇氣與熱情，邁向自己的未來，將實戰精神傳承下去…</string>
@@ -252,18 +252,18 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TMI 駐場創業家，曾任 Yahoo！亞太區廣告業務總監。出生香港、麻省理工學院 Sloan 商學院 MBA 畢業，芝加哥 Ruby on Rails 課程研習、在美國，北京，香港有多次 Startup 經驗" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F4m-Qj-qN7">
                                 <rect key="frame" x="16" y="324" width="288" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bernard.png" id="TtV-Tp-aqO">
-                                <rect key="frame" x="88" y="125" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="85" y="125" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Nbn-iy-0jf">
                                 <rect key="frame" x="16" y="80" width="288" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="團隊核心人物"/>
                                     <segment title="師資與顧問團"/>
@@ -282,7 +282,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bernard Chan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zPp-aK-T38">
                                 <rect key="frame" x="31" y="289" width="258" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -595,8 +595,8 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="Ix9-qz-EDn">
-                                <rect key="frame" x="143" y="264" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="141" y="266" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.047058823529411764" green="0.039215686274509803" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -710,11 +710,11 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
             </objects>
             <point key="canvasLocation" x="-799" y="540"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--AboutAC-->
         <scene sceneID="ArJ-ho-LBD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mra-yp-Gol" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="yLc-AB-8rx"/>
+                    <tabBarItem key="tabBarItem" title="AboutAC" image="alpha-icon.png" id="yLc-AB-8rx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IzM-6r-3Vs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -733,6 +733,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
     <resources>
         <image name="Bernard Photo.png" width="255" height="255"/>
         <image name="Bernard.png" width="255" height="255"/>
+        <image name="alpha-icon.png" width="30" height="30"/>
         <image name="alpha-logo-long.png" width="836" height="201"/>
         <image name="class_.png" width="30" height="30"/>
         <image name="event.png" width="30" height="30"/>
