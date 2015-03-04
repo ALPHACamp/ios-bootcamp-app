@@ -10,19 +10,22 @@
 #import "User.h"
 
 @interface ACAboutACMembersViewController (){
-    int arrayCount;
+    int currentIndex;
+    int staffIndex;
+    int teacherIndex;
+    int alumniIndex;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *introLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (strong, nonatomic) NSArray *staffArray;
-@property (strong, nonatomic) NSArray *teacherArray;
-@property (strong, nonatomic) NSArray *alumniArray;
+@property (strong, nonatomic) NSArray *staffArray;  //array of staffs info
+@property (strong, nonatomic) NSArray *teacherArray; //array of teachers info
+@property (strong, nonatomic) NSArray *alumniArray;  //array of alumni info
 @property (strong, nonatomic) NSDictionary *userDataDict;
 @property (strong, nonatomic) NSArray *currentArray;
-
 
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
@@ -127,16 +130,23 @@
                          @"alumni" : self.alumniArray
                          };
     
-    // 先確認dictionary 裡的value是否為Array
+    // Introspection: 確認dictionary裡的value是否為Array,
     if ([self.userDataDict[@"staff"] isKindOfClass:[NSArray class]]) {
+        //將此Array寫入self.currentArray
         self.currentArray = self.userDataDict[@"staff"];
+        currentIndex =0;
     }
     [self refreshView];
     
     
     //set up next Button
     [self.nextButton addTarget:self action:@selector(nextButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    arrayCount =0;
+    
+    //set up Index
+    staffIndex =0;
+    teacherIndex =0;
+    alumniIndex =0;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -147,14 +157,29 @@
 #pragma mark ButtonPressed
 
 - (void)nextButtonPressed: (id)sender{
-    
-    arrayCount ++;
-    if (arrayCount >= self.currentArray.count) {
-        arrayCount =0;
-        [self refreshView];
-        
-    }else{
-        [self refreshView];
+    currentIndex ++;
+    [self refreshView];
+}
+
+- (IBAction)previousButtonPressed:(id)sender {
+    currentIndex --;
+    [self refreshView];
+}
+
+- (void) saveIndex{
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case 0:
+            staffIndex =currentIndex;
+            break;
+        case 1:
+            teacherIndex =currentIndex;
+            break;
+        case 2:
+            alumniIndex =currentIndex;
+            break;
+            
+        default:
+            break;
     }
 }
 
@@ -166,25 +191,23 @@
         case 0:
             if ([self.userDataDict[@"staff"] isKindOfClass:[NSArray class]]) {
                 self.currentArray = self.userDataDict[@"staff"];
+                currentIndex = staffIndex;
             }
             [self refreshView];
-            
             break;
         case 1:
             if ([self.userDataDict[@"teacher"] isKindOfClass:[NSArray class]]) {
-                NSLog(@"YES!!");
                 self.currentArray = self.userDataDict[@"teacher"];
+                currentIndex = teacherIndex;
             }
             [self refreshView];
             break;
         case 2:
             if ([self.userDataDict[@"alumni"] isKindOfClass:[NSArray class]]) {
                 self.currentArray = self.userDataDict[@"alumni"];
+                currentIndex = alumniIndex;
             }
-            
             [self refreshView];
-            
-            
             break;
         default:
             break;
@@ -195,13 +218,15 @@
 
 - (void) refreshView{
     
-    self.headImageView.image= [self.currentArray[arrayCount] image];
-    self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[arrayCount] firstName],[self.currentArray[arrayCount] lastName] ];
-    self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[arrayCount] intro]];
-    
-//    self.headImageView.image= [self.currentArray[0][arrayCount] image];
-//    self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[0][arrayCount] firstName],[self.currentArray[0][arrayCount] lastName] ];
-//    self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[0][arrayCount] intro]];
+    if (currentIndex >= self.currentArray.count) {
+        currentIndex =0;
+    }else if (currentIndex < 0){
+        currentIndex = (int)self.currentArray.count;
+    }
+    self.headImageView.image= [self.currentArray[currentIndex] image];
+    self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[currentIndex] firstName],[self.currentArray[currentIndex] lastName] ];
+    self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[currentIndex] intro]];
+    [self saveIndex];
 }
 
 
