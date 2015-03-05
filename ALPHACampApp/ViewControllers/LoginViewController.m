@@ -42,7 +42,7 @@
                                  @"email": self.emailTextField.text,
                                  @"password": self.passwordTextField.text,
                                  @"api_key": api_key};
-    [manager POST:@"https://school.alphacamp.co/api/v1/login"
+    [manager POST:@"https://dojo.alphacamp.co/api/v1/login"
        parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               

@@ -36,7 +36,7 @@
     NSDictionary *parameters = @{
                                  @"api_key": api_key,
                                  @"auth_token": authToken};
-    [manager POST:@"https://school.alphacamp.co/api/v1/logout"
+    [manager POST:@"https://dojo.alphacamp.co/api/v1/logout"
        parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               

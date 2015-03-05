@@ -50,7 +50,7 @@
     NSString *currentURL = self.webView.request.URL.absoluteString;
     NSLog(@"currentURL: %@", currentURL);
     
-    if ([currentURL isEqualToString:@"https://school.alphacamp.co/users/sign_in"]) {
+    if ([currentURL isEqualToString:@"https://dojo.alphacamp.co/users/sign_in"]) {
         self.indicatorView.hidden=NO;
     }else{
         [self.indicatorView stopAnimating];

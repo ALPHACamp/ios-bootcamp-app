@@ -35,7 +35,7 @@
                                  @"api_key": api_key,
                                  @"auth_token": authToken};
     
-    [manager GET:@"https://school.alphacamp.co/api/v1/courses"
+    [manager GET:@"https://dojo.alphacamp.co/api/v1/courses"
       parameters:parameters
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              self.courseArray = responseObject[@"courses"];
@@ -43,7 +43,7 @@
              
              self.headerTitle =[NSString stringWithFormat:@"%@", self.courseArray[1][@"name"]];
              NSString * course_id = [NSString stringWithFormat:@"%@", self.courseArray[1][@"id"]];
-             NSString *sectionURL =[NSString stringWithFormat:@"https://school.alphacamp.co/api/v1/courses/%@",course_id];
+             NSString *sectionURL =[NSString stringWithFormat:@"https://dojo.alphacamp.co/api/v1/courses/%@",course_id];
              
              NSDictionary *parameters = @{
                                           @"api_key": api_key,
@@ -81,7 +81,7 @@
                                  @"api_key": api_key,
                                  @"auth_token": authToken};
     
-    [manager GET:@"https://school.alphacamp.co/api/v1/courses"
+    [manager GET:@"https://dojo.alphacamp.co/api/v1/courses"
       parameters:parameters
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              //NSLog(@"Course: %@", responseObject);
@@ -98,7 +98,7 @@
                       //抓取課程資料
                       AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
                       NSString * course_id = [NSString stringWithFormat:@"%@", self.courseArray[i][@"id"]];
-                      NSString *sectionURL =[NSString stringWithFormat:@"https://school.alphacamp.co/api/v1/courses/%@",course_id];
+                      NSString *sectionURL =[NSString stringWithFormat:@"https://dojo.alphacamp.co/api/v1/courses/%@",course_id];
                       
                       NSDictionary *parameters = @{
                                                    @"api_key": api_key,
