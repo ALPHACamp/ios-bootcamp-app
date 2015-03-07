@@ -44,18 +44,19 @@
     NSString *password = [defaults objectForKey:@"password"];
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[email]')[0].value = '%@';",userName]];
    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[password]')[0].value = '%@';",password]];
-     [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('commit')[0].click();"];
-
+    // [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('commit')[0].click();"];
+    [self.indicatorView stopAnimating];
+    self.indicatorView.hidden=YES;
     //判斷載入頁面以跳過sign in頁面, 再將indicator隱藏
-    NSString *currentURL = self.webView.request.URL.absoluteString;
-    NSLog(@"currentURL: %@", currentURL);
-    
-    if ([currentURL isEqualToString:@"https://dojo.alphacamp.co/users/sign_in"]) {
-        self.indicatorView.hidden=NO;
-    }else{
-        [self.indicatorView stopAnimating];
-        self.indicatorView.hidden=YES;
-    }
+//    NSString *currentURL = self.webView.request.URL.absoluteString;
+//    NSLog(@"currentURL: %@", currentURL);
+//    
+//    if ([currentURL isEqualToString:@"https://dojo.alphacamp.co/users/sign_in"]) {
+//        self.indicatorView.hidden=NO;
+//    }else{
+//        [self.indicatorView stopAnimating];
+//        self.indicatorView.hidden=YES;
+//    }
     
 }
 
