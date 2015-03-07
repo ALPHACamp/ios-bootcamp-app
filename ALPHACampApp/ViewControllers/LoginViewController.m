@@ -25,9 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    //to show up keyboard automatically
+    [self.emailTextField becomeFirstResponder];
     
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,8 +40,9 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{
                                  @"email": self.emailTextField.text,
-                                 @"password": self.passwordTextField.text};
-    [manager POST:@"https://school.alphacamp.co/api/v1/login"
+                                 @"password": self.passwordTextField.text,
+                                 @"api_key": api_key};
+    [manager POST:@"https://dojo.alphacamp.co/api/v1/login"
        parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               
@@ -51,8 +52,14 @@
 
               
               NSLog(@"JSON: %@", responseObject);
-              
               self.auth_token = [NSString stringWithFormat:@"%@", responseObject[@"auth_token"]];
+              
+              NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+              [userDefaults setObject:self.auth_token forKey:@"auth_token"];
+              [userDefaults setObject:self.emailTextField.text forKey:@"userName"];
+              [userDefaults setObject:self.passwordTextField.text forKey:@"password"];
+              [userDefaults synchronize];
+              
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Login in Error: %@", error);
               //NSString *erroeMessage = [NSString stringWithFormat:@"%@", error];

@@ -10,4 +10,6 @@
 
 @interface ClassDetailViewController : UIViewController
 
+@property (strong, nonatomic)NSString *webViewURL;
+
 @end

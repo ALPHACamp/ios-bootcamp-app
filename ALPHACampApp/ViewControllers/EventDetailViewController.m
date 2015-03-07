@@ -9,10 +9,11 @@
 #import "EventDetailViewController.h"
 #import <Parse/Parse.h>
 
-@interface EventDetailViewController ()
+@interface EventDetailViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property(nonatomic) BOOL suppressesIncrementalRendering;
 
-
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 
 @end
 
@@ -23,9 +24,15 @@
     // show navigationBar to go back
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
+    //improve webView loading performance
+    self.suppressesIncrementalRendering =YES;
+    
+    
+    [self.indicatorView startAnimating];
+    self.webView.delegate = self;
     //setup WebView URL
     NSURL *url = [NSURL URLWithString:self.eventDetailURL];
-  NSLog(@"Print URL: %@", url);
+    NSLog(@"Print URL: %@", url);
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
 }
@@ -35,14 +42,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)webViewDidFinishLoad:(UIWebView *)webView;{
+   self.indicatorView.hidden=YES;
 }
-*/
 
 @end

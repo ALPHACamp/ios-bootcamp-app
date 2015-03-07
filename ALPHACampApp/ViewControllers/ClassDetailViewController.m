@@ -8,22 +8,55 @@
 
 #import "ClassDetailViewController.h"
 
-@interface ClassDetailViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@interface ClassDetailViewController ()<UIWebViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
+
+@property(nonatomic) BOOL suppressesIncrementalRendering;
 @end
 
 @implementation ClassDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
-    NSString *fullURL = @"http://alphacamp.co";
-    NSURL *url = [NSURL URLWithString:fullURL];
+    [self.indicatorView startAnimating];
+    
+    //improve WebView loading performance
+    self.suppressesIncrementalRendering =YES;
+    
+    //set delegate to self
+    self.webView.delegate =self;
+    
+    //set url
+    NSURL *url = [NSURL URLWithString:self.webViewURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
+}
+
+//在載入網頁時，預先輸入user帳號密碼
+-(void)webViewDidFinishLoad:(UIWebView *)webView;{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [defaults objectForKey:@"userName"];
+    NSString *password = [defaults objectForKey:@"password"];
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[email]')[0].value = '%@';",userName]];
+   [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('user[password]')[0].value = '%@';",password]];
+     [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('commit')[0].click();"];
+
+    //判斷載入頁面以跳過sign in頁面, 再將indicator隱藏
+    NSString *currentURL = self.webView.request.URL.absoluteString;
+    NSLog(@"currentURL: %@", currentURL);
+    
+    if ([currentURL isEqualToString:@"https://dojo.alphacamp.co/users/sign_in"]) {
+        self.indicatorView.hidden=NO;
+    }else{
+        [self.indicatorView stopAnimating];
+        self.indicatorView.hidden=YES;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

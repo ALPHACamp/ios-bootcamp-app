@@ -110,7 +110,6 @@
                                scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
                                       objectAtIndex:[self.searchDisplayController.searchBar
                                                      selectedScopeButtonIndex]]];
-    
     return YES;
 }
 
