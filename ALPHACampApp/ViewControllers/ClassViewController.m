@@ -148,7 +148,10 @@
     
     headerLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, 40.0);
     headerLabel.textColor =[ UIColor blackColor];
-    headerLabel.text = [NSString stringWithFormat:@"    %@",self.headerTitle];
+    if (self.headerTitle) {
+        headerLabel.text = [NSString stringWithFormat:@"    %@",self.headerTitle];
+    }
+    
     headerLabel.backgroundColor =[UIColor lightGrayColor];
 
     return headerLabel;
