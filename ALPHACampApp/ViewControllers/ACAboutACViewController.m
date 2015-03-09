@@ -20,6 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//     self.view.backgroundColor =[UIColor colorWithRed:33/255.0 green:39/255.0 blue:56/255.0 alpha:1];
+//     self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:33/255.0 green:39/255.0 blue:56/255.0 alpha:1];
+//     self.navigationController.navigationBar.translucent = NO;
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 130, 25)];
+    imageView.image = [UIImage imageNamed:@"ALPHACamp"];
+    
+    self.navigationItem.titleView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 25)];
+    [self.navigationItem.titleView addSubview:imageView];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -28,28 +37,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)logoutButtonPressed:(id)sender {
-    //[PFUser logOut];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *authToken = [NSString stringWithFormat:@"%@", [userDefaults stringForKey:@"auth_token"]];
-    NSDictionary *parameters = @{
-                                 @"api_key": api_key,
-                                 @"auth_token": authToken};
-    [manager POST:@"https://dojo.alphacamp.co/api/v1/logout"
-       parameters:parameters
-          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              
-              NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-              [defaults removeObjectForKey:@"auth_token"];
-              
-              WelcomeViewController *rootVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
-              [self.navigationController pushViewController:rootVC animated:YES];
-              
-          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              NSLog(@"Login out Error: %@", error);
-          }];
-}
 
 
 @end

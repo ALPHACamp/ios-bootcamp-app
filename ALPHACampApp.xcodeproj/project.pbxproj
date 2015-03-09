@@ -16,9 +16,7 @@
 		E80596FC1A716015008B73F3 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80596FB1A716015008B73F3 /* EventDetailViewController.m */; };
 		E823E9AE1A5ED4DA00FD86D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E823E9AD1A5ED4DA00FD86D1 /* main.m */; };
 		E823E9B11A5ED4DA00FD86D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E823E9B01A5ED4DA00FD86D1 /* AppDelegate.m */; };
-		E823E9BA1A5ED4DA00FD86D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E823E9B81A5ED4DA00FD86D1 /* Main.storyboard */; };
 		E823E9BC1A5ED4DA00FD86D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E823E9BB1A5ED4DA00FD86D1 /* Images.xcassets */; };
-		E823E9BF1A5ED4DA00FD86D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E823E9BD1A5ED4DA00FD86D1 /* LaunchScreen.xib */; };
 		E823E9CB1A5ED4DA00FD86D1 /* ALPHACampAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E823E9CA1A5ED4DA00FD86D1 /* ALPHACampAppTests.m */; };
 		E84393D71A66744100A09E36 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393D61A66744100A09E36 /* EventViewController.m */; };
 		E84393DA1A66745A00A09E36 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393D91A66745A00A09E36 /* ClassViewController.m */; };
@@ -49,6 +47,8 @@
 		E8AFF2F31AA60FFD00000C41 /* Shyne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8AFF2EE1AA60FFD00000C41 /* Shyne.jpg */; };
 		E8AFF2F61AA6139E00000C41 /* ACAboutACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2F51AA6139E00000C41 /* ACAboutACViewController.m */; };
 		E8AFF2F91AA613BD00000C41 /* ACAboutACMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */; };
+		E8B7EC591AAD830C00A1B567 /* ALPHACamp.png in Resources */ = {isa = PBXBuildFile; fileRef = E8B7EC581AAD830C00A1B567 /* ALPHACamp.png */; };
+		E8B7EC5B1AAD875D00A1B567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */; };
 		E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */; };
 		E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA91A77D44D00EDA316 /* User.m */; };
 		E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */; };
@@ -81,9 +81,7 @@
 		E823E9AD1A5ED4DA00FD86D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E823E9AF1A5ED4DA00FD86D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E823E9B01A5ED4DA00FD86D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E823E9B91A5ED4DA00FD86D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E823E9BB1A5ED4DA00FD86D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E823E9BE1A5ED4DA00FD86D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E823E9C41A5ED4DA00FD86D1 /* ALPHACampAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPHACampAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E823E9C91A5ED4DA00FD86D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E823E9CA1A5ED4DA00FD86D1 /* ALPHACampAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALPHACampAppTests.m; sourceTree = "<group>"; };
@@ -125,6 +123,8 @@
 		E8AFF2F51AA6139E00000C41 /* ACAboutACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutACViewController.m; sourceTree = "<group>"; };
 		E8AFF2F71AA613BD00000C41 /* ACAboutACMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAboutACMembersViewController.h; sourceTree = "<group>"; };
 		E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutACMembersViewController.m; sourceTree = "<group>"; };
+		E8B7EC581AAD830C00A1B567 /* ALPHACamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ALPHACamp.png; sourceTree = "<group>"; };
+		E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		E8EA3BA81A77D44D00EDA316 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -194,9 +194,7 @@
 			children = (
 				E8EA3BA71A77D40D00EDA316 /* Model */,
 				E84393D41A6673D700A09E36 /* ViewControllers */,
-				E823E9B81A5ED4DA00FD86D1 /* Main.storyboard */,
 				E823E9BB1A5ED4DA00FD86D1 /* Images.xcassets */,
-				E823E9BD1A5ED4DA00FD86D1 /* LaunchScreen.xib */,
 				E823E9AB1A5ED4DA00FD86D1 /* Supporting Files */,
 			);
 			path = ALPHACampApp;
@@ -263,6 +261,7 @@
 				E84393DC1A66746B00A09E36 /* ProfileViewController.m */,
 				E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */,
 				E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */,
+				E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -270,6 +269,7 @@
 		E8AFF2D91AA60EEC00000C41 /* AC photos */ = {
 			isa = PBXGroup;
 			children = (
+				E8B7EC581AAD830C00A1B567 /* ALPHACamp.png */,
 				E8AFF2CF1AA5C69D00000C41 /* Tim.png */,
 				E8AFF2EA1AA60FFD00000C41 /* Edward.jpg */,
 				E8AFF2EB1AA60FFD00000C41 /* Brian.jpg */,
@@ -394,18 +394,18 @@
 				E8AFF2F31AA60FFD00000C41 /* Shyne.jpg in Resources */,
 				E8AFF2E71AA60F0300000C41 /* Anthony.jpg in Resources */,
 				E8AFF2E81AA60F0300000C41 /* Reinhardt.jpg in Resources */,
+				E8B7EC5B1AAD875D00A1B567 /* Main.storyboard in Resources */,
 				E8AFF2D41AA5C69D00000C41 /* Tim.png in Resources */,
 				E8AFF2E41AA60F0300000C41 /* Eddie.jpg in Resources */,
 				E80596AE1A713DFB008B73F3 /* Bernard.png in Resources */,
 				E8AFF2E51AA60F0300000C41 /* Abby.jpg in Resources */,
-				E823E9BA1A5ED4DA00FD86D1 /* Main.storyboard in Resources */,
+				E8B7EC591AAD830C00A1B567 /* ALPHACamp.png in Resources */,
 				E80596BA1A7144A6008B73F3 /* event@2x.png in Resources */,
 				E8AFF2F21AA60FFD00000C41 /* Peter.jpg in Resources */,
 				E8AFF2D51AA5C69D00000C41 /* Ariel.png in Resources */,
 				E8AFF2D61AA5C69D00000C41 /* Benson.png in Resources */,
 				E84393E81A6684A400A09E36 /* alpha-logo-long.png in Resources */,
 				E8AFF2E91AA60F0300000C41 /* Winnie.jpg in Resources */,
-				E823E9BF1A5ED4DA00FD86D1 /* LaunchScreen.xib in Resources */,
 				E823E9BC1A5ED4DA00FD86D1 /* Images.xcassets in Resources */,
 				E8AFF2F11AA60FFD00000C41 /* AmosLee.jpg in Resources */,
 				E8AFF2D71AA5C69D00000C41 /* Evelyn.jpg in Resources */,
@@ -502,25 +502,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		E823E9B81A5ED4DA00FD86D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E823E9B91A5ED4DA00FD86D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E823E9BD1A5ED4DA00FD86D1 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E823E9BE1A5ED4DA00FD86D1 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		E823E9CC1A5ED4DA00FD86D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -603,6 +584,7 @@
 			baseConfigurationReference = 534FC5A5627963B9EB2A88E1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACampApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -615,6 +597,7 @@
 			baseConfigurationReference = A21BC6F7000DDA47223AF5B3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACampApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
