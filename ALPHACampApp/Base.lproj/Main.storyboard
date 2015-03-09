@@ -250,19 +250,12 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TMI 駐場創業家，曾任 Yahoo！亞太區廣告業務總監。出生香港、麻省理工學院 Sloan 商學院 MBA 畢業，芝加哥 Ruby on Rails 課程研習、在美國，北京，香港有多次 Startup 經驗" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F4m-Qj-qN7">
-                                <rect key="frame" x="16" y="324" width="288" height="134"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bernard.png" id="TtV-Tp-aqO">
-                                <rect key="frame" x="85" y="125" width="150" height="150"/>
+                                <rect key="frame" x="85" y="118" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Nbn-iy-0jf">
-                                <rect key="frame" x="16" y="80" width="288" height="29"/>
+                                <rect key="frame" x="16" y="77" width="288" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="團隊核心人物"/>
@@ -281,7 +274,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bernard Chan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zPp-aK-T38">
-                                <rect key="frame" x="31" y="289" width="258" height="27"/>
+                                <rect key="frame" x="31" y="279" width="258" height="27"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -297,6 +290,14 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                                     <action selector="previousButtonPressed:" destination="fxv-9Y-iHI" eventType="touchUpInside" id="5j9-ib-hHt"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="D6i-2t-1hR">
+                                <rect key="frame" x="17" y="314" width="287" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -304,7 +305,7 @@ ALPHA Camp 首創 10 周 Bootcamp 實戰營，引入導師制度並與業界緊�
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="headImageView" destination="TtV-Tp-aqO" id="hWt-1w-VzX"/>
-                        <outlet property="introLabel" destination="F4m-Qj-qN7" id="vQT-04-hcL"/>
+                        <outlet property="introTextField" destination="D6i-2t-1hR" id="gRq-pd-FaP"/>
                         <outlet property="nameLabel" destination="zPp-aK-T38" id="wc1-SA-Bhr"/>
                         <outlet property="nextButton" destination="d0A-mk-xwP" id="GUM-Fd-RG0"/>
                         <outlet property="segmentedControl" destination="Nbn-iy-0jf" id="sZg-Un-QmW"/>

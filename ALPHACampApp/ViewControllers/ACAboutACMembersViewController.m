@@ -19,7 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *introLabel;
+@property (weak, nonatomic) IBOutlet UITextView *introTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) NSArray *staffArray;  //array of staffs info
 @property (strong, nonatomic) NSArray *teacherArray; //array of teachers info
@@ -227,7 +227,7 @@
  
     self.headImageView.image= [self.currentArray[currentIndex] image];
     self.nameLabel.text=[NSString stringWithFormat:@"%@ %@",[self.currentArray[currentIndex] firstName],[self.currentArray[currentIndex] lastName] ];
-    self.introLabel.text=[NSString stringWithFormat:@"%@", [self.currentArray[currentIndex] intro]];
+    self.introTextField.text=[NSString stringWithFormat:@"%@", [self.currentArray[currentIndex] intro]];
     [self saveIndex];
 }
 
