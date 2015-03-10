@@ -47,6 +47,7 @@
 		E8AFF2F91AA613BD00000C41 /* ACAboutACMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */; };
 		E8B7EC591AAD830C00A1B567 /* ALPHACamp.png in Resources */ = {isa = PBXBuildFile; fileRef = E8B7EC581AAD830C00A1B567 /* ALPHACamp.png */; };
 		E8B7EC5B1AAD875D00A1B567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */; };
+		E8E5AE251AAEF5E200B314F6 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E5AE241AAEF5E200B314F6 /* Launch Screen.xib */; };
 		E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA91A77D44D00EDA316 /* User.m */; };
 		E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutACMembersViewController.m; sourceTree = "<group>"; };
 		E8B7EC581AAD830C00A1B567 /* ALPHACamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ALPHACamp.png; sourceTree = "<group>"; };
 		E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E8E5AE241AAEF5E200B314F6 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		E8EA3BA81A77D44D00EDA316 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E8EA3BA91A77D44D00EDA316 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E8FA6C0C1A7F9CD600FD8E2F /* ACEventButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACEventButton.h; path = ../ACEventButton.h; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				E84393D41A6673D700A09E36 /* ViewControllers */,
 				E823E9BB1A5ED4DA00FD86D1 /* Images.xcassets */,
 				E823E9AB1A5ED4DA00FD86D1 /* Supporting Files */,
+				E8E5AE241AAEF5E200B314F6 /* Launch Screen.xib */,
 			);
 			path = ALPHACampApp;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				E8AFF2E31AA60F0300000C41 /* Kung.jpg in Resources */,
 				E8AFF2F31AA60FFD00000C41 /* Shyne.jpg in Resources */,
 				E8AFF2E71AA60F0300000C41 /* Anthony.jpg in Resources */,
+				E8E5AE251AAEF5E200B314F6 /* Launch Screen.xib in Resources */,
 				E8AFF2E81AA60F0300000C41 /* Reinhardt.jpg in Resources */,
 				E8B7EC5B1AAD875D00A1B567 /* Main.storyboard in Resources */,
 				E8AFF2D41AA5C69D00000C41 /* Tim.png in Resources */,
