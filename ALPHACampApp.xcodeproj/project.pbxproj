@@ -74,7 +74,7 @@
 		E80596F61A714F77008B73F3 /* ClassDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetailViewController.m; sourceTree = "<group>"; };
 		E80596FA1A716015008B73F3 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
 		E80596FB1A716015008B73F3 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
-		E823E9A81A5ED4DA00FD86D1 /* ALPHACampApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPHACampApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E823E9A81A5ED4DA00FD86D1 /* ALPHACamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPHACamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E823E9AC1A5ED4DA00FD86D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E823E9AD1A5ED4DA00FD86D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E823E9AF1A5ED4DA00FD86D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		E823E9A91A5ED4DA00FD86D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E823E9A81A5ED4DA00FD86D1 /* ALPHACampApp.app */,
+				E823E9A81A5ED4DA00FD86D1 /* ALPHACamp.app */,
 				E823E9C41A5ED4DA00FD86D1 /* ALPHACampAppTests.xctest */,
 			);
 			name = Products;
@@ -311,7 +311,7 @@
 			);
 			name = ALPHACampApp;
 			productName = ALPHACampApp;
-			productReference = E823E9A81A5ED4DA00FD86D1 /* ALPHACampApp.app */;
+			productReference = E823E9A81A5ED4DA00FD86D1 /* ALPHACamp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E823E9C31A5ED4DA00FD86D1 /* ALPHACampAppTests */ = {
@@ -574,7 +574,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACampApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ALPHACamp;
 			};
 			name = Debug;
 		};
@@ -587,7 +587,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALPHACampApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ALPHACamp;
 			};
 			name = Release;
 		};
