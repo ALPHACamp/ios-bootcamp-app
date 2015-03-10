@@ -20,9 +20,7 @@
 		E823E9CB1A5ED4DA00FD86D1 /* ALPHACampAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E823E9CA1A5ED4DA00FD86D1 /* ALPHACampAppTests.m */; };
 		E84393D71A66744100A09E36 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393D61A66744100A09E36 /* EventViewController.m */; };
 		E84393DA1A66745A00A09E36 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393D91A66745A00A09E36 /* ClassViewController.m */; };
-		E84393DD1A66746B00A09E36 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393DC1A66746B00A09E36 /* ProfileViewController.m */; };
 		E84393E01A6675DC00A09E36 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393DF1A6675DC00A09E36 /* WelcomeViewController.m */; };
-		E84393E31A6675EC00A09E36 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393E21A6675EC00A09E36 /* RegisterViewController.m */; };
 		E84393E61A6675FA00A09E36 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84393E51A6675FA00A09E36 /* LoginViewController.m */; };
 		E84393E81A6684A400A09E36 /* alpha-logo-long.png in Resources */ = {isa = PBXBuildFile; fileRef = E84393E71A6684A400A09E36 /* alpha-logo-long.png */; };
 		E8AFF2C41AA33E2E00000C41 /* LessonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2C31AA33E2E00000C41 /* LessonTableViewController.m */; };
@@ -49,7 +47,6 @@
 		E8AFF2F91AA613BD00000C41 /* ACAboutACMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */; };
 		E8B7EC591AAD830C00A1B567 /* ALPHACamp.png in Resources */ = {isa = PBXBuildFile; fileRef = E8B7EC581AAD830C00A1B567 /* ALPHACamp.png */; };
 		E8B7EC5B1AAD875D00A1B567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */; };
-		E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */; };
 		E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EA3BA91A77D44D00EDA316 /* User.m */; };
 		E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA6C0D1A7F9CD600FD8E2F /* ACEventButton.m */; };
 /* End PBXBuildFile section */
@@ -89,12 +86,8 @@
 		E84393D61A66744100A09E36 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		E84393D81A66745A00A09E36 /* ClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassViewController.h; sourceTree = "<group>"; };
 		E84393D91A66745A00A09E36 /* ClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
-		E84393DB1A66746B00A09E36 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		E84393DC1A66746B00A09E36 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		E84393DE1A6675DC00A09E36 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		E84393DF1A6675DC00A09E36 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		E84393E11A6675EC00A09E36 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		E84393E21A6675EC00A09E36 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		E84393E41A6675FA00A09E36 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E84393E51A6675FA00A09E36 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E84393E71A6684A400A09E36 /* alpha-logo-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "alpha-logo-long.png"; path = "ViewControllers/alpha-logo-long.png"; sourceTree = "<group>"; };
@@ -125,8 +118,6 @@
 		E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAboutACMembersViewController.m; sourceTree = "<group>"; };
 		E8B7EC581AAD830C00A1B567 /* ALPHACamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ALPHACamp.png; sourceTree = "<group>"; };
 		E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		E8EA3BA81A77D44D00EDA316 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E8EA3BA91A77D44D00EDA316 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E8FA6C0C1A7F9CD600FD8E2F /* ACEventButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACEventButton.h; path = ../ACEventButton.h; sourceTree = "<group>"; };
@@ -239,8 +230,6 @@
 			children = (
 				E84393DE1A6675DC00A09E36 /* WelcomeViewController.h */,
 				E84393DF1A6675DC00A09E36 /* WelcomeViewController.m */,
-				E84393E11A6675EC00A09E36 /* RegisterViewController.h */,
-				E84393E21A6675EC00A09E36 /* RegisterViewController.m */,
 				E84393E41A6675FA00A09E36 /* LoginViewController.h */,
 				E84393E51A6675FA00A09E36 /* LoginViewController.m */,
 				E84393D51A66744100A09E36 /* EventViewController.h */,
@@ -257,10 +246,6 @@
 				E8AFF2F51AA6139E00000C41 /* ACAboutACViewController.m */,
 				E8AFF2F71AA613BD00000C41 /* ACAboutACMembersViewController.h */,
 				E8AFF2F81AA613BD00000C41 /* ACAboutACMembersViewController.m */,
-				E84393DB1A66746B00A09E36 /* ProfileViewController.h */,
-				E84393DC1A66746B00A09E36 /* ProfileViewController.m */,
-				E8EA3BA41A77CEEC00EDA316 /* SearchViewController.h */,
-				E8EA3BA51A77CEEC00EDA316 /* SearchViewController.m */,
 				E8B7EC5A1AAD875D00A1B567 /* Main.storyboard */,
 			);
 			path = ViewControllers;
@@ -469,15 +454,12 @@
 				E84393E61A6675FA00A09E36 /* LoginViewController.m in Sources */,
 				E823E9B11A5ED4DA00FD86D1 /* AppDelegate.m in Sources */,
 				E84393D71A66744100A09E36 /* EventViewController.m in Sources */,
-				E84393DD1A66746B00A09E36 /* ProfileViewController.m in Sources */,
 				E823E9AE1A5ED4DA00FD86D1 /* main.m in Sources */,
 				E8AFF2C41AA33E2E00000C41 /* LessonTableViewController.m in Sources */,
-				E84393E31A6675EC00A09E36 /* RegisterViewController.m in Sources */,
 				E80596FC1A716015008B73F3 /* EventDetailViewController.m in Sources */,
 				E8AFF2F91AA613BD00000C41 /* ACAboutACMembersViewController.m in Sources */,
 				E84393DA1A66745A00A09E36 /* ClassViewController.m in Sources */,
 				E8EA3BAA1A77D44D00EDA316 /* User.m in Sources */,
-				E8EA3BA61A77CEEC00EDA316 /* SearchViewController.m in Sources */,
 				E80596F71A714F77008B73F3 /* ClassDetailViewController.m in Sources */,
 				E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */,
 				E84393E01A6675DC00A09E36 /* WelcomeViewController.m in Sources */,
