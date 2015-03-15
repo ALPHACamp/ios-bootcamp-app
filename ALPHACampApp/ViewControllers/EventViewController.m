@@ -23,8 +23,9 @@
 //Lazy init MutableArray
 - (NSMutableArray *) URLArray {
     if(!_URLArray)
-        _URLArray = [@[] mutableCopy]; // @[] 宣告一個Array裡面是空的, mutableCopy就是複製一個Array變成multable,並把指向此multableArray
-    return _URLArray;
+      // Declare an empty array and use mutable copy to make it multable, and point it to mutableArray.
+        _URLArray = [@[] mutableCopy];
+  return _URLArray;
 }
 
 - (void)viewDidLoad {
@@ -119,23 +120,21 @@
 }
 
 
--(void)buttonPressed: (id)sender
-{
+-(void)buttonPressed: (id)sender {
     ACEventButton *button =(ACEventButton *) sender;
-    //透過button.event 這個object,找到對應的URL
+    // use button event to find URL
     NSString *URL = [NSString stringWithFormat:@"%@", button.event[@"eventURL"]];
     
     
     EventDetailViewController *eventDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
     
-    //將EventDetailViewController中的eventDetailURL設為相對應的URL
+    // Setup mapping URL
     eventDetailVC.eventDetailURL=URL;
     
     [self.navigationController pushViewController:eventDetailVC animated:YES];
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
+-(void)viewWillAppear:(BOOL)animated {
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 

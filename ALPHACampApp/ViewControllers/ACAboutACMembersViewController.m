@@ -10,8 +10,7 @@
 #import "User.h"
 #import "WelcomeViewController.h"
 #import <AFNetworking/AFNetworking.h>
-
-#define api_key @"21f7814731bbbcc3302fbe06194e53c4993a3976"
+#import "ACAltas.h"
 
 @interface ACAboutACMembersViewController (){
     int currentIndex;
@@ -40,9 +39,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:33/255.0 green:39/255.0 blue:56/255.0 alpha:1];
-//    self.navigationController.navigationBar.translucent = YES;
-
     //set up staffs Array
     User * sBernard =[User initWithfirstName:@"Bernard" lastName:@"Chan"];
     sBernard.intro = @"TMI 駐場創業家，曾任 Yahoo！亞太區廣告業務總監。出生香港、麻省理工學院 Sloan 商學院 MBA 畢業，芝加哥 Ruby on Rails 課程研習、在美國，北京，香港有多次 Startup 經驗";

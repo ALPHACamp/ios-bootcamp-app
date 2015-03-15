@@ -9,8 +9,7 @@
 #import "ClassViewController.h"
 #import "LessonTableViewController.h"
 #import <AFNetworking/AFNetworking.h>
-
-#define api_key @"21f7814731bbbcc3302fbe06194e53c4993a3976"
+#import "ACAltas.h"
 
 @interface ClassViewController ()<UITableViewDataSource, UITableViewDelegate,
     UIActionSheetDelegate>
@@ -87,7 +86,7 @@
              //NSLog(@"Course: %@", responseObject);
             self.courseArray = responseObject[@"courses"];
      
-             // 用actionsheet 來選擇課程
+             // Use actionsheet to chose class
              UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
              UIAlertAction * cancel =[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
              }];
@@ -95,7 +94,7 @@
 
               for (int i=0; i < self.courseArray.count; i++) {
                   UIAlertAction *action =[UIAlertAction actionWithTitle:self.courseArray[i][@"name"] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                      //抓取課程資料
+                      // Collect classroom data
                       AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
                       NSString * course_id = [NSString stringWithFormat:@"%@", self.courseArray[i][@"id"]];
                       NSString *sectionURL =[NSString stringWithFormat:@"https://dojo.alphacamp.co/api/v1/courses/%@",course_id];

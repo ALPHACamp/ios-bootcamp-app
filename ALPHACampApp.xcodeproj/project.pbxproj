@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1C45B11AB56BDF0033CE91 /* ACAltas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1C45B01AB56BDF0033CE91 /* ACAltas.m */; };
 		B5CC5B25CBF0CA41CF027F9E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A77BA142C737BFEC9C69AFF /* libPods.a */; };
 		E80596AE1A713DFB008B73F3 /* Bernard.png in Resources */ = {isa = PBXBuildFile; fileRef = E80596AD1A713DFB008B73F3 /* Bernard.png */; };
 		E80596BA1A7144A6008B73F3 /* event@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E80596B71A7144A6008B73F3 /* event@2x.png */; };
@@ -64,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		0A77BA142C737BFEC9C69AFF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1C45AF1AB56BDF0033CE91 /* ACAltas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAltas.h; sourceTree = "<group>"; };
+		1C1C45B01AB56BDF0033CE91 /* ACAltas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAltas.m; sourceTree = "<group>"; };
 		534FC5A5627963B9EB2A88E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A21BC6F7000DDA47223AF5B3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E80596AD1A713DFB008B73F3 /* Bernard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bernard.png; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 		E823E9AA1A5ED4DA00FD86D1 /* ALPHACampApp */ = {
 			isa = PBXGroup;
 			children = (
+				1C1C45AF1AB56BDF0033CE91 /* ACAltas.h */,
+				1C1C45B01AB56BDF0033CE91 /* ACAltas.m */,
 				E8EA3BA71A77D40D00EDA316 /* Model */,
 				E84393D41A6673D700A09E36 /* ViewControllers */,
 				E823E9BB1A5ED4DA00FD86D1 /* Images.xcassets */,
@@ -467,6 +472,7 @@
 				E80596F71A714F77008B73F3 /* ClassDetailViewController.m in Sources */,
 				E8FA6C0E1A7F9CD600FD8E2F /* ACEventButton.m in Sources */,
 				E84393E01A6675DC00A09E36 /* WelcomeViewController.m in Sources */,
+				1C1C45B11AB56BDF0033CE91 /* ACAltas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

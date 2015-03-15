@@ -9,8 +9,7 @@
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
 #import <AFNetworking.h>
-
-#define api_key @"21f7814731bbbcc3302fbe06194e53c4993a3976"
+#import "ACAltas.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -25,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
-    //to show up keyboard automatically
+    // To show up keyboard automatically
     [self.emailTextField becomeFirstResponder];
     
 }
@@ -81,46 +80,5 @@
 
     
 }
-
-
-
-
-
-#pragma mark - Parse Login
-//- (IBAction)loginButtonPressed:(id)sender {
-//    
-//    [PFUser logInWithUsernameInBackground:self.emailTextField.text password:self.passwordTextField.text
-//                                    block:^(PFUser *user, NSError *error) {
-//                                        if (user) {
-//                                            UITabBarController *tabBarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
-//                                            [tabBarVC setSelectedIndex:0];
-//                                            [self presentViewController:tabBarVC animated:YES completion:nil];
-//
-//                                        } else {
-//                                            UIAlertController * alert=   [UIAlertController
-//                                                                          alertControllerWithTitle:@"帳號密碼錯誤，請重新輸入"
-//                                                                          message:@"請注意是否大小寫有誤"
-//                                                                          preferredStyle:UIAlertControllerStyleAlert];
-//                                            
-//                                            UIAlertAction* ok = [UIAlertAction
-//                                                                 actionWithTitle:@"OK"
-//                                                                 style:UIAlertActionStyleDefault
-//                                                                 handler:^(UIAlertAction * action)
-//                                                                 {
-//                                                                     self.emailTextField.text=@"";
-//                                                                     self.passwordTextField.text=@"";
-//                                                                 }];
-//                                            
-//                                            [alert addAction:ok];
-//                                            
-//                                            [self presentViewController:alert animated:YES completion:nil];
-//                   }
-//                                    }];
-//    
-//    
-//    
-//   }
-
-
 
 @end

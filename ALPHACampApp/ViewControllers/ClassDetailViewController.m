@@ -37,7 +37,7 @@
     [self.webView loadRequest:requestObj];
 }
 
-//在載入網頁時，預先輸入user帳號密碼
+// Input user account password while loading webpage.
 -(void)webViewDidFinishLoad:(UIWebView *)webView;{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *userName = [defaults objectForKey:@"userName"];
@@ -47,16 +47,6 @@
     // [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('commit')[0].click();"];
     [self.indicatorView stopAnimating];
     self.indicatorView.hidden=YES;
-    //判斷載入頁面以跳過sign in頁面, 再將indicator隱藏
-//    NSString *currentURL = self.webView.request.URL.absoluteString;
-//    NSLog(@"currentURL: %@", currentURL);
-//    
-//    if ([currentURL isEqualToString:@"https://dojo.alphacamp.co/users/sign_in"]) {
-//        self.indicatorView.hidden=NO;
-//    }else{
-//        [self.indicatorView stopAnimating];
-//        self.indicatorView.hidden=YES;
-//    }
     
 }
 
