@@ -20,7 +20,7 @@ Install pods file under root directory.
 $ pod install
 ```
 
-Now you can open bomdic.xcworkspace
+Now you can open ALPHACampApp.xcworkspace
 
 # Update to latest version
 
