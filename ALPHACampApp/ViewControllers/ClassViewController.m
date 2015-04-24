@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    //set up first View load data
-    
+    self.classTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *authToken = [NSString stringWithFormat:@"%@", [userDefaults stringForKey:@"auth_token"]];
